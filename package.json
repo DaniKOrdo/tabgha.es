@@ -7,11 +7,13 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "translate": "npx astro-i18next generate"
   },
   "dependencies": {
     "@astrojs/tailwind": "^3.1.0",
     "astro": "^2.1.2",
+    "astro-i18next": "^1.0.0-beta.21",
     "tailwindcss": "^3.2.7"
   }
 }

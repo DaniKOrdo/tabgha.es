@@ -1,0 +1,9 @@
+{
+    "titulo": {
+        "carta": "Carta",
+        "sentido": "Sentido",
+        "noticias": "Noticias",
+        "ubicacion": "Ubicación",
+        "contacto": "Contacto"
+    }
+}
