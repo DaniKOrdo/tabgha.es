@@ -1,5 +1,6 @@
 {
-    "titulo": {
+    "navegacion": {
+        "inicio": "Inicio",
         "carta": "Carta",
         "sentido": "Sentido",
         "noticias": "Noticias",

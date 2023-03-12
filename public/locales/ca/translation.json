@@ -1,9 +1,10 @@
 {
-    "titulo": {
+    "navegacion": {
+        "inicio": "Inici",
         "carta": "Carta",
-        "sentido": "Sentido",
-        "noticias": "Noticias",
-        "ubicacion": "Ubicación",
-        "contacto": "Contacto"
+        "sentido": "Sentit",
+        "noticias": "Noticies",
+        "ubicacion": "Ubicació",
+        "contacto": "Contacte"
     }
 }

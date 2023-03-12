@@ -1,7 +1,8 @@
 {
-    "titulo": {
+    "navegacion": {
+        "inicio": "Home",
         "carta": "Carta",
-        "sentido": "Sentido",
+        "sentido": "Sinn",
         "noticias": "Noticias",
         "ubicacion": "Ubicación",
         "contacto": "Contacto"
