@@ -5,6 +5,15 @@ module.exports = {
 		extend: {
 			backgroundImage: {
 				'portals-nous': "url('/img/portals-nous.jpg')"
+			},
+			colors: {
+				'tg-one': '#CFF09E',
+				'tg-two': '#A8DBA8',
+				'tg-three': '#79BD9A',
+				'tg-four': '#3B8686'
+			},
+			fontFamily: {
+				'tg-title': ['Lobster']
 			}
 		},
 	},
