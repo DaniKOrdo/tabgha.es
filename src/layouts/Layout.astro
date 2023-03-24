@@ -18,7 +18,7 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<HeadHrefLangs />
 		<title>{title}</title>
-		<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
 	</head>
 	<body>
 		<slot />
@@ -32,15 +32,11 @@ const { title } = Astro.props;
 	}
 	html {
 		font-family: system-ui, sans-serif;
-		background-color: #7e8ca4;
+		background-color: #f7f6ef;
 	}
 	code {
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
 			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
-	.xesc-p-color {
-		/* background-color: #307bc5; */
-		background-image: linear-gradient(90deg, #3182CE, #3182CE 12%, #2d61a3, #2B6CB0 100%);
 	}
 	.patron-borde {
 		position: absolute;
