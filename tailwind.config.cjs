@@ -17,7 +17,7 @@ module.exports = {
 				'tb-postHeader': '#1e2b61'
 			},
 			fontFamily: {
-				'tg-title': ['Poiret One']
+				'tg-title': ['Manrope']
 			}
 		},
 	},
