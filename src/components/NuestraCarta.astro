@@ -2,6 +2,8 @@
 import { t } from "i18next";
 import Menu from '/img/menu.png'
 import TitleSection from "./widgets/TitleSection.astro";
+import RestaurantSVG from './icons/Restaurant.astro'
+import DrinkSVG from './icons/Drink.astro'
 ---
 
 <section id="menu" class="flex justify-center">
@@ -21,9 +23,9 @@ import TitleSection from "./widgets/TitleSection.astro";
             </p>
 
             <div class="mt-8 justify-center flex flex-col items-center gap-4 text-center">
-                <a href={"/" + t("navegacion.desayuno")} class="w-3/4 rounded px-12 py-3 text-sm font-medium text-white shadow bg-tg-three bg-opacity-80">Desayuno</a>
-                <a href={"/" + t("navegacion.comida")} class="w-3/4 rounded px-12 py-3 text-sm font-medium text-white shadow bg-tg-three bg-opacity-80">Comida</a>
-                <a href={"/" + t("navegacion.bebidas")} class="w-3/4 rounded px-12 py-3 text-sm font-medium text-white shadow bg-tg-three bg-opacity-80">Bebidas</a>
+                <!-- <a href={"/" + t("navegacion.desayuno")} class="flex items-center justify-center gap-2 w-3/4 rounded px-12 py-3 text-sm font-medium text-white shadow bg-tg-three bg-opacity-80"><RestaurantSVG />Desayuno</a> -->
+                <a href={"/" + t("navegacion.comida")} class="flex items-center justify-center gap-2 w-3/4 rounded px-12 py-3 text-sm font-medium text-white shadow bg-tg-three bg-opacity-80"><RestaurantSVG />Comida</a>
+                <a href={"/" + t("navegacion.bebidas")} class="flex items-center justify-center gap-2 w-3/4 rounded px-12 py-3 text-sm font-medium text-white shadow bg-tg-three bg-opacity-80"><DrinkSVG />Bebidas</a>
             </div>
         </div>
     </div>
