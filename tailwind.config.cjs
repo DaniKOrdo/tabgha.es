@@ -8,8 +8,8 @@ module.exports = {
 				'tabgha-beach': "url('/img/tabgha-beach.jpeg')"
 			},
 			colors: {
-				'tg-one': '#CFF09E',
-				'tg-two': '#A8DBA8',
+				'tg-one': '#1E2B61',
+				'tg-two': '#254B5E',
 				'tg-three': '#1e2b61',
 				'tg-four': '#3B8686',
 				'tg-sand': '#faeed7',
