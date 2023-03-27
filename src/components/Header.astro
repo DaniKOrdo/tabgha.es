@@ -1,17 +1,18 @@
 ---
-import tabghaLogo from '/img/tabgha-logo.png'
+import tabghaLogo from '/img/logo-peces-pan.png'
+import tabghaLogoOLD from '/img/tabgha-logo.png'
 import RestaurantSVG from './icons/Restaurant.astro'
 import ArrowRightSM from './icons/ArrowRightSM.astro'
 ---
 
-<section class="relative md:pt-0  bg-tabgha-beach bg-cover bg-center bg-no-repeat">
-    <div class="absolute inset-0 bg-black/0 sm:bg-transparent sm:bg-gradient-to-r sm:from-black/0 sm:to-black/50"></div>
+<section class="relative md:pt-0 bg-tabgha-beach bg-cover bg-left sm:bg-center bg-no-repeat">
+    <div class="absolute inset-0 bg-gradient-to-b from-black/0 to-black/0 sm:bg-transparent sm:bg-gradient-to-r sm:from-black/0 sm:to-black/0"></div>
 
-    <div class="relative text-white mx-auto max-w-screen-xl md:py-32 py-10 px-6 sm:flex sm:flex-row-reverse md:h-screen sm:items-center lg:px-8">
-        <div class="max-w-xl text-center justify-center bg-opacity-70 p-12 rounded-md">
-            <img src={tabghaLogo} alt="Tabgha Logo" class="p-6 m-auto">
+    <div class="relative text-black mx-auto max-w-screen-xl md:py-32 py-20 px-6 sm:flex sm:flex-row-reverse md:h-screen sm:items-center lg:px-8">
+        <div class="max-w-xl text-center justify-center sm:bg-opacity-60 bg-opacity-90 p-12 rounded-xl bg-white">
+            <img src={tabghaLogoOLD} alt="Tabgha Logo" class="p-6 m-auto">
             <h1 class="text-3xl font-extrabold sm:text-5xl ">TABGHA
-                <strong class="font-tg-title block font-extrabold text-tg-four">
+                <strong class="font-tg-title block font-extrabold text-tg-one ">
                     Portals Nous
                 </strong>
             </h1>
@@ -23,7 +24,7 @@ import ArrowRightSM from './icons/ArrowRightSM.astro'
             <div class="mt-8 flex items-center flex-wrap gap-4 text-center justify-center">
                 <a
                     href="#menu"
-                    class="flex items-center justify-center gap-2 w-full rounded bg-tg-three px-12 py-3 text-sm font-medium text-white shadow focus:outline-none focus:ring sm:w-auto"
+                    class="flex items-center justify-center gap-2 w-full rounded bg-tg-one bg-opacity-80 px-12 py-3 text-sm font-medium text-white shadow focus:outline-none focus:ring sm:w-auto"
                 >
                     <RestaurantSVG/>
                     Nuestra carta
