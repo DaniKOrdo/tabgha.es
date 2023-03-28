@@ -1,0 +1,23 @@
+---
+import TitleSection from "./TitleSection.astro";
+
+const { id, flex = "flex-col lg:flex-row", title, text, img, alt } = Astro.props;
+---
+
+<section id={id} class="flex justify-center">
+  <div
+    class={`flex ${flex} lg:justify-center items-center w-screen max-w-screen-xl lg:gap-4 text-black max-m-32 lg:p-6 lg:m-6 rounded-xl`}
+  >
+    <div
+      class="flex flex-col items-center text-center sm:text-left p-8 lg:w-1/2"
+    >
+      <TitleSection title={title} />
+      <p class="mt-4 max-w-lg sm:text-xl">{text}</p>
+      <slot />
+    </div>
+
+    <div class="p-8 flex justify-center lg:w-1/2">
+      <img class="max-h-80 rounded-md" src={img} alt={alt} />
+    </div>
+  </div>
+</section>
