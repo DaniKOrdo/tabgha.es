@@ -1,30 +1,23 @@
 ---
 import { t } from "i18next";
-import TitleSection from "./widgets/TitleSection.astro";
-import ArrowRightSM from './icons/ArrowRightSM.astro';
+import Section from "./widgets/Section.astro";
+import ArrowRightSM from "./icons/ArrowRightSM.astro";
 ---
 
-<section id="sense" class="flex justify-center">
-    <div class="flex flex-col md:flex-row md:justify-center w-screen md:gap-4 items-center text-black max-w-screen-xl md:p-8 max-m-32 md:m-12 rounded-xl">
-        <div class="flex flex-col items-center text-center sm:text-left p-8">
-            <TitleSection title={t("titulos.sentido")} />
-            <p class="mt-4 max-w-lg sm:text-xl ">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-            <div class="mt-8 justify-center flex gap-4 text-center">
-                <a href="#" class="flex items-center justify-center gap-2 rounded bg-tg-three bg-opacity-80 px-12 py-3 text-sm font-medium text-white shadow sm:w-auto">
-                    Saber más
-                    <ArrowRightSM stroke="white" />
-                </a>
-            </div>
-        </div>
-
-        <div class="p-8 flex">
-            <img
-            class="max-h-80 rounded-md"
-            src="https://domussophiae.com/wp-content/uploads/2020/01/Tabgha-Panes-y-Peces-1080x675.jpg"
-            alt="Tabgha-Panes-y-Peces"
-            />
-        </div>
-    </div>
-</section>
+<Section
+  id="sense"
+  title={t("titulos.sentido")}
+  text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  img="https://domussophiae.com/wp-content/uploads/2020/01/Tabgha-Panes-y-Peces-1080x675.jpg"
+  alt="Tabgha-Panes-y-Peces"
+>
+  <div class="mt-8 justify-center flex gap-4 text-center">
+    <a
+      href="#"
+      class="flex items-center justify-center gap-2 rounded bg-tg-three bg-opacity-80 px-12 py-3 text-sm font-medium text-white shadow sm:w-auto"
+    >
+      Saber más
+      <ArrowRightSM stroke="white" />
+    </a>
+  </div>
+</Section>
