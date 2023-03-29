@@ -5,43 +5,16 @@ import RestaurantSVG from './icons/Restaurant.astro'
 import DrinkSVG from './icons/Drink.astro'
 ---
 
-<!-- <section id="menu" class="flex justify-center">
-    <div class="flex flex-col-reverse md:flex-row md:justify-center w-screen md:gap-4 items-center text-black max-w-screen-xl md:p-8 max-m-32 md:m-12 rounded-xl">
-        <div class="p-8 flex md:w-1/2">
-            <img
-            class="max-h-96"
-            src={Menu}
-            alt="Menu"
-            />
-        </div>
-        <div class="text-center sm:text-center p-8 md:w-1/2">
-            flex flex-col items-center text-center sm:text-left p-8 lg:w-1/2
-            <TitleSection title={t("titulos.carta")} />
-
-            <p class="mt-4 max-w-lg sm:text-xl ">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-
-            <div class="mt-8 justify-center flex flex-col items-center gap-4 text-center">
-                <!-- <a href={"/" + t("navegacion.desayuno")} class="flex items-center justify-center gap-2 w-3/4 rounded px-12 py-3 text-sm font-medium text-white shadow bg-tg-three bg-opacity-80"><RestaurantSVG />Desayuno</a>
-                <a href={"/" + t("navegacion.comida")} class="flex items-center justify-center gap-2 w-3/4 rounded px-12 py-3 text-sm font-medium text-white shadow bg-tg-three bg-opacity-80"><RestaurantSVG />Comida</a>
-                <a href={"/" + t("navegacion.bebidas")} class="flex items-center justify-center gap-2 w-3/4 rounded px-12 py-3 text-sm font-medium text-white shadow bg-tg-three bg-opacity-80"><DrinkSVG />Bebidas</a>
-            </div>
-        </div>
-    </div>
-</section> -->
-
-
 <Section
   id="menu"
-  flex="flex-col-reverse lg:flex-row-reverse"
+  flex="flex-col lg:flex-row-reverse"
   title={t("titulos.carta")}
   text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
   img="/img/menu.png"
   alt="Menu Carta Tabgha"
 >
-<div class="mt-8 justify-center flex flex-col items-center gap-4 text-center">
-    <a href={"/" + t("navegacion.comida")} class="flex items-center justify-center gap-2 w-3/4 rounded px-12 py-3 text-sm font-medium text-white shadow bg-tg-three bg-opacity-80"><RestaurantSVG />Comida</a>
-    <a href={"/" + t("navegacion.bebidas")} class="flex items-center justify-center gap-2 w-3/4 rounded px-12 py-3 text-sm font-medium text-white shadow bg-tg-three bg-opacity-80"><DrinkSVG />Bebidas</a>
-</div>
+  <div class="justify-center flex flex-col items-center text-center mt-8 gap-4 w-full">
+    <a href={"/" + t("navegacion.comida")} class="flex items-center justify-center gap-2 w-3/4 rounded px-12 py-3 text-sm font-medium text-white shadow bg-tg-two"><RestaurantSVG />Comida</a>
+    <a href={"/" + t("navegacion.bebidas")} class="flex items-center justify-center gap-2 w-3/4 rounded px-12 py-3 text-sm font-medium text-white shadow bg-tg-two"><DrinkSVG />Bebidas</a>
+  </div>
 </Section>
