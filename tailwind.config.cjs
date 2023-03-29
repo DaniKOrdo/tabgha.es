@@ -9,8 +9,8 @@ module.exports = {
 			},
 			colors: {
 				'tg-one': '#1E2B61',
-				'tg-two': '#254B5E',
-				'tg-three': '#1e2b61',
+				'tg-two': '#49537E',
+				'tg-three': '#254B5E',
 				'tg-four': '#3B8686',
 				'tg-sand': '#faeed7',
 				'tg-navbar': '#fdf7e1',
