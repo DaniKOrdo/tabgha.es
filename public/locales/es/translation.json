@@ -5,6 +5,18 @@
         "sentido": "Sentido",
         "noticias": "Noticias",
         "ubicacion": "Ubicación",
-        "contacto": "Contacto"
+        "contacto": "Contacto",
+        "desayuno": "desayuno",
+        "comida": "comida",
+        "bebidas": "bebidas"
+    },
+    "titulos": {
+        "sentido": "SENTIDO",
+        "carta": "NUESTRA CARTA",
+        "noticias": "NOTICIAS",
+        "ubicacion": "UBICACIÓN"
+    },
+    "textos": {
+        "sentido": "Queridos hermanos y hermanas, ¡buenos días! El Evangelio de la Liturgia de este domingo narra el célebre episodio de la multiplicación de los panes y los peces, con los que Jesús sacia el hambre de cerca de cinco mil personas que se habían congregado para escucharlo (cf. Jn 6,1-15). Es interesante ver cómo ocurre este prodigio: Jesús no crea los panes y los peces de la nada, no, sino que obra a partir de lo que le traen los discípulos."
     }
 }
