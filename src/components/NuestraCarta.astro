@@ -1,8 +1,14 @@
 ---
-import { t } from "i18next";
+import i18next, { t } from "i18next";
 import Section from "./widgets/Section.astro";
 import RestaurantSVG from './icons/Restaurant.astro'
 import DrinkSVG from './icons/Drink.astro'
+
+const lang = i18next.language;
+
+const imgMenu = lang === 'es' || lang === 'ca' ?
+  "/img/menu-tabgha-mapa-es.jpg" :
+  "/img/menu-tabgha-mapa-en.jpg"
 ---
 
 <Section
@@ -10,7 +16,7 @@ import DrinkSVG from './icons/Drink.astro'
   flex="flex-col lg:flex-row-reverse"
   title={t("titulos.carta")}
   text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-  img="/img/menu.png"
+  img={imgMenu}
   alt="Menu Carta Tabgha"
 >
   <div class="justify-center flex flex-col items-center text-center mt-8 gap-4 w-full">
