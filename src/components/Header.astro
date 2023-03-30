@@ -5,26 +5,27 @@ import RestaurantSVG from './icons/Restaurant.astro'
 import ArrowRightSM from './icons/ArrowRightSM.astro'
 ---
 
-<section class="relative md:pt-0 bg-tabgha-beach bg-cover bg-left sm:bg-center bg-no-repeat lg:mb-20 md:mb-16">
-    <div class="absolute inset-0 bg-gradient-to-b from-black/0 to-black/0 sm:bg-transparent sm:bg-gradient-to-r sm:from-black/0 sm:to-black/0"></div>
+<section class="relative md:pt-0 sm:bg-tabgha-beach bg-tabgha-beach-mobile bg-cover bg-bottom sm:bg-left bg-no-repeat lg:mb-20">
+    <div class="absolute inset-0 bg-gradient-to-b from-black/0 to-black/60 sm:bg-transparent sm:bg-gradient-to-r sm:from-black/0 sm:to-black/0"></div>
+    <!-- <svg class="absolute inset-x-0 bottom-0" viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg"><path fill="#f7f6ef" d="M0 100h1440V0c-120 15-240 25-360 30s-240 5-360-5S480 0 360-10c120 5 0 0-120 15S0 45-120 75l-360 90v20z"/></svg> -->
+    <svg class="absolute inset-x-0 bottom-0" viewBox="0 0 1080 60" xmlns="http://www.w3.org/2000/svg"><path fill="#f7f6ef" d="M0 30C120 0 240 0 360 30s240 30 360 0 240-30 360 0 240 30 360 0v30H0V30z"/></svg>
+    <div class="relative text-white mx-auto max-w-screen-xl md:py-32 py-5 px-6 sm:flex sm:flex-row-reverse md:h-screen sm:items-center lg:px-8">
+        <div class="max-w-xl text-center justify-center sm:bg-opacity-60 bg-opacity-30 p-12 rounded-xl ">
+            <img src={tabghaLogo} alt="Tabgha Logo" class="p-6 m-auto">
+                <h1 class="text-3xl font-extrabold sm:text-5xl">TABGHA
+                    <strong class="font-tg-title block font-extrabold text-tg-sand ">
+                        Portals Nous
+                    </strong>
+                </h1>
 
-    <div class="relative text-black mx-auto max-w-screen-xl md:py-32 py-20 px-6 sm:flex sm:flex-row-reverse md:h-screen sm:items-center lg:px-8">
-        <div class="max-w-xl text-center justify-center sm:bg-opacity-60 bg-opacity-90 p-12 rounded-xl bg-white">
-            <img src={tabghaLogoOLD} alt="Tabgha Logo" class="p-6 m-auto">
-            <h1 class="text-3xl font-extrabold sm:text-5xl ">TABGHA
-                <strong class="font-tg-title block font-extrabold text-tg-one ">
-                    Portals Nous
-                </strong>
-            </h1>
-
-            <p class="mt-4 max-w-lg sm:text-xl sm:leading-relaxed">
-                Chiringuito en la playa de Portals Nous, Mallorca. Con una cocina mediterránea y un ambiente relajado y familiar.
-            </p>
+                <p class="mt-4 max-w-lg sm:text-xl sm:leading-relaxed">
+                    Chiringuito en la playa de Portals Nous, Mallorca. Con una cocina mediterránea y un ambiente relajado y familiar.
+                </p>
 
             <div class="mt-8 flex items-center flex-wrap gap-4 text-center justify-center">
                 <a
                     href="#menu"
-                    class="flex items-center justify-center gap-2 w-full rounded bg-tg-one bg-opacity-80 px-12 py-3 text-sm font-medium text-white shadow focus:outline-none focus:ring sm:w-auto"
+                    class="flex items-center justify-center gap-2 w-full rounded bg-tg-two px-12 py-3 text-sm font-medium text-white shadow focus:outline-none focus:ring sm:w-auto"
                 >
                     <RestaurantSVG/>
                     Nuestra carta
