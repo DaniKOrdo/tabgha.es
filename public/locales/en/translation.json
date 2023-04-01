@@ -1,10 +1,24 @@
 {
-    "navegacion": {
-        "inicio": "Home",
-        "carta": "Menu",
-        "sentido": "Sense",
-        "noticias": "News",
-        "ubicacion": "Ubication",
-        "contacto": "Contact"
-    }
+  "navegacion": {
+    "inicio": "home",
+    "sentido": "sense",
+    "carta": "menu",
+    "colabora": "collaborate",
+    "noticias": "news",
+    "ubicacion": "location",
+    "contacto": "contact",
+    "comida": "food",
+    "bebidas": "drinks"
+  },
+  "titulos": {
+    "sentido": "SENSE",
+    "carta": "OUR MENU",
+    "colabora": "COLLABORATE",
+    "noticias": "NEWS",
+    "ubicacion": "LOCATION"
+  },
+  "textos": {
+    "sentido": "Dear brothers and sisters, good morning! The Gospel of this Sunday's Liturgy tells the famous episode of the multiplication of the loaves and fishes, with which Jesus satisfies the hunger of nearly five thousand people who had gathered to listen to him (cf. Jn 6:1-15). It is interesting to see how this miracle happens: Jesus does not create the bread and fish out of nothing, no, but works with what the disciples bring him.",
+    "colabora": "You can collaborate with our project by making a donation through Bizum. You can donate a solidarity menu or the amount you wish."
+  }
 }

@@ -1,10 +1,24 @@
 {
-    "navegacion": {
-        "inicio": "Home",
-        "carta": "Carta",
-        "sentido": "Sinn",
-        "noticias": "Noticias",
-        "ubicacion": "Ubicación",
-        "contacto": "Contacto"
-    }
+  "navegacion": {
+    "inicio": "home",
+    "sentido": "sense",
+    "carta": "menu",
+    "colabora": "collaborate",
+    "noticias": "news",
+    "ubicacion": "location",
+    "contacto": "contact",
+    "comida": "food",
+    "bebidas": "drinks"
+  },
+  "titulos": {
+    "sentido": "sinn",
+    "carta": "UNSERS MENÜ",
+    "colabora": "ZUSAMMENARBEITEN",
+    "noticias": "NACHRICHTEN",
+    "ubicacion": "ORT"
+  },
+  "textos": {
+    "sentido": "Liebe Brüder und Schwestern, guten Morgen! Das Evangelium der Liturgie dieses Sonntags erzählt die berühmte Episode der Vermehrung von Brot und Fischen, mit denen Jesus den Hunger von fast fünftausend Menschen stillt, die sich versammelt hatten, um ihm zuzuhören (vgl. Joh 6,1-15). Es ist interessant zu sehen, wie dieses Wunder geschieht: Jesus erschafft das Brot und den Fisch nicht aus dem Nichts, sondern arbeitet mit dem, was die Jünger ihm bringen.",
+    "colabora": "Sie können mit unserem Projekt durch eine Spende über Bizum zusammenarbeiten. Sie können ein Solidaritätsmenü oder den gewünschten Betrag spenden."
+  }
 }

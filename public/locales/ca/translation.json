@@ -1,10 +1,24 @@
 {
-    "navegacion": {
-        "inicio": "Inici",
-        "carta": "Carta",
-        "sentido": "Sentit",
-        "noticias": "Noticies",
-        "ubicacion": "Ubicació",
-        "contacto": "Contacte"
-    }
+  "navegacion": {
+    "inicio": "home",
+    "sentido": "sense",
+    "carta": "menu",
+    "colabora": "collaborate",
+    "noticias": "news",
+    "ubicacion": "location",
+    "contacto": "contact",
+    "comida": "food",
+    "bebidas": "drinks"
+  },
+  "titulos": {
+    "sentido": "SENTIT",
+    "carta": "EL NOSTRE MENÚ",
+    "colabora": "COL·LABORA",
+    "noticias": "NOTÍCIES",
+    "ubicacion": "UBICACIÓ"
+  },
+  "textos": {
+    "sentido": "Bones germanes i germans, bon dia! L'Evangeli de la Litúrgia d'aquest diumenge narra el famós episodi de la multiplicació dels pans i els peixos, amb els quals Jesús sacia la fam de prop de cinc mil persones que s'havien congregat per escoltar-lo (cf. Jn 6:1-15). És interessant veure com succeeix aquest miracle: Jesús no crea els pans i els peixos de la res, no, sinó que obra a partir del que li porten els deixebles.",
+    "colabora": "Pots col·laborar amb el nostre projecte fent una donació a través de Bizum. Pots donar un menú solidari o la quantitat que desitgis."
+  }
 }
