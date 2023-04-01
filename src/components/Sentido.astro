@@ -1,11 +1,12 @@
 ---
 import { t } from "i18next";
+import { localizePath } from "astro-i18next";
 import Section from "./widgets/Section.astro";
 import ArrowRightSM from "./icons/ArrowRightSM.astro";
 ---
 
 <Section
-  id="sense"
+  id={t("navegacion.sentido")}
   title={t("titulos.sentido")}
   text={t("textos.sentido")}
   img="/img/Tabgha-Panes-y-Peces.jpg"
@@ -13,10 +14,10 @@ import ArrowRightSM from "./icons/ArrowRightSM.astro";
 >
   <div class="mt-8 justify-center flex gap-4 text-center">
     <a
-      href="#"
+      href={localizePath(t("navegacion.sentido"))}
       class="flex items-center justify-center gap-2 rounded bg-tg-two px-12 py-3 text-sm font-medium text-white shadow sm:w-auto"
     >
-      Leer más
+      {localizePath(t("navegacion.sentido"))}
       <ArrowRightSM stroke="white" />
     </a>
   </div>
