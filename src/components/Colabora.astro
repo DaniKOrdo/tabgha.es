@@ -1,0 +1,23 @@
+---
+import { t } from "i18next";
+import Section from "./widgets/Section.astro";
+import ArrowRightSM from "./icons/ArrowRightSM.astro";
+---
+
+<Section
+  id={t("navegacion.colabora")}
+  title={t("titulos.colabora")}
+  text={t("textos.colabora")}
+  img="/img/colabora.png"
+  alt="Tabgha-Panes-y-Peces"
+>
+  <div class="mt-8 justify-center flex gap-4 text-center">
+    <a
+      href="#"
+      class="flex items-center justify-center gap-2 rounded bg-tg-two px-12 py-3 text-sm font-medium text-white shadow sm:w-auto"
+    >
+      Leer más
+      <ArrowRightSM stroke="white" />
+    </a>
+  </div>
+</Section>

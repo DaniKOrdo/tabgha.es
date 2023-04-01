@@ -4,12 +4,12 @@ import { Trans, HeadHrefLangs } from "astro-i18next/components";
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import Header from "../components/Header.astro";
-import PostHeader from "../components/PostHeader.astro";
 import Footer from "../components/Footer.astro";
 import Sentido from "../components/Sentido.astro";
 import NuestraCarta from "../components/NuestraCarta.astro";
 import Noticias from "../components/Noticias.astro";
 import Ubicacion from "../components/Ubicacion.astro";
+import Colabora from "../components/Colabora.astro";
 
 changeLanguage("es");
 ---
@@ -18,11 +18,11 @@ changeLanguage("es");
 	<header>
 		<Navbar />
 	</header>
-	<main>
+	<main class="mb-36">
 		<Header />
-		<PostHeader />
 		<Sentido />
 		<NuestraCarta />
+		<Colabora />
 		<Noticias />
 		<Ubicacion />
 	</main>
