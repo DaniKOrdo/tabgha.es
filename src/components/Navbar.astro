@@ -1,9 +1,11 @@
 ---
 import i18next, { t } from "i18next";
 import { localizePath } from "astro-i18next";
-import  LanguageSelector  from "./LanguageSelector.astro";
+import  LanguageSelectorLOCAL  from "./LanguageSelector.astro";
+import  {LanguageSelector}  from "astro-i18next/components";
 
 import tabghaLogo from '/img/tabgha-logo.png'
+const { pathname } = Astro.url;
 
 const isCurrentPath = (path) => {
     const { pathname } = Astro.url;
@@ -15,6 +17,7 @@ const isCurrentPath = (path) => {
 const navigationItems = {
     "/": t("navegacion.inicio"),
     "/sentido/": t("navegacion.sentido"),
+    "/carta/": t("navegacion.carta"),
     "/noticias/": t("navegacion.noticias"),
     "/ubicacion/": t("navegacion.ubicacion"),
     "/contacto/": t("navegacion.contacto"),
@@ -28,26 +31,33 @@ const navigationItems = {
             <img src={tabghaLogo} class="h-9 mr-3 ml-3 sm:h-9" alt="Tabgha Logo" />
             <span class="self-center text-xl font-semibold whitespace-nowrap">TABGHA</span>
         </a>
-        <LanguageSelector showFlag={true} class="bg-gray-200 bg-opacity-50 p-1 rounded-full" />
-        <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-default" aria-expanded="false">
-            <span class="sr-only">Open main menu</span>
+        <LanguageSelectorLOCAL showFlag={true} class="bg-tg-two bg-opacity-20 p-1 rounded-full cursor-pointer" />
+        <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-default" aria-expanded="false">
+            <span class="sr-only">Menu</span>
             <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
         </button>
         <div class="hidden w-full md:block md:w-auto md:bg-opacity-10" id="navbar-default">
-            <ul class="flex flex-col p-4 mt-4 border md:bg-transparent bg-white rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0">
+            <ul class="flex flex-col p-4 mt-4 border md:bg-transparent bg-white rounded-lg md:flex-row md:space-x-0 xl:space-x-6 md:mt-0 md:text-sm md:font-medium md:border-0">
                 {
                     Object.keys(navigationItems).map((key) => {
                         let className = "py-2 px-4 uppercase text-sm underline-offset-2 tracking-wider decoration-4 font-semibold";
-                        if (isCurrentPath(localizePath(key, i18next.language))) {
-                            className += " underline decoration-tg-two";
-                        } else {
-                            className += " opacity-75 hover:opacity-100 hover:underline decoration-gray-300";
+                        if (isCurrentPath(localizePath(key, i18next.language))) className += " underline decoration-tg-two";
+                        else className += " opacity-75 hover:opacity-100 hover:underline decoration-gray-300";
+
+                        if (pathname === "/" || pathname === "/ca" || pathname === "/en" || pathname === "/de") {
+                            return (
+                                <a class={className} href={`#${navigationItems[key]}`}>
+                                    {navigationItems[key]}
+                                </a>
+                            );
                         }
-                        return (
-                            <a class={className} href={localizePath(key, i18next.language)}>
-                                {navigationItems[key]}
-                            </a>
-                        );
+                        else {
+                            return (
+                                <a class={className} href={`${localizePath('/', i18next.language)}#${navigationItems[key]}`}>
+                                    {navigationItems[key]}
+                                </a>
+                            );
+                        }
                     })
                 }
 
