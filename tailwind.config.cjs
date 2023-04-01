@@ -13,7 +13,7 @@ module.exports = {
 				'tg-two': '#49537E',
 				'tg-three': '#254B5E',
 				'tg-four': '#3B8686',
-				'tg-sand': '#faeed7',
+				'tg-sand': '#e6be8f',
 				'tg-navbar': '#fdf7e1',
 				'tb-postHeader': '#1e2b61'
 			},
