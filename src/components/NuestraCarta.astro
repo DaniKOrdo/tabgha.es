@@ -1,26 +1,37 @@
 ---
 import i18next, { t } from "i18next";
 import Section from "./widgets/Section.astro";
-import RestaurantSVG from './icons/Restaurant.astro'
-import DrinkSVG from './icons/Drink.astro'
+import RestaurantSVG from "./icons/Restaurant.astro";
+import DrinkSVG from "./icons/Drink.astro";
 
 const lang = i18next.language;
 
-const imgMenu = lang === 'es' || lang === 'ca' ?
-  "/img/menu-tabgha-mapa-es.jpg" :
-  "/img/menu-tabgha-mapa-en.jpg"
+const imgMenu =
+  lang === "es" || lang === "ca"
+    ? "/img/menu-tabgha-mapa-es.jpg"
+    : "/img/menu-tabgha-mapa-en.jpg";
 ---
 
 <Section
-  id={t("navegacion.carta")}
+  id={t("navbar.carta")}
   flex="flex-col lg:flex-row-reverse"
   title={t("titulos.carta")}
-  text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  text={t("textos.carta")}
   img={imgMenu}
   alt="Menu Carta Tabgha"
 >
-  <div class="justify-center flex flex-col items-center text-center mt-8 gap-4 w-full">
-    <a href={"/" + t("navegacion.comida")} class="flex items-center justify-center gap-2 w-3/4 rounded px-12 py-3 text-sm font-medium text-white shadow bg-tg-two"><RestaurantSVG />Comida</a>
-    <a href={"/" + t("navegacion.bebidas")} class="flex items-center justify-center gap-2 w-3/4 rounded px-12 py-3 text-sm font-medium text-white shadow bg-tg-two"><DrinkSVG />Bebidas</a>
+  <div
+    class="justify-center flex flex-col items-center text-center mt-8 gap-4 w-full"
+  >
+    <a
+      href={"/" + t("navegacion.comida")}
+      class="flex items-center justify-center gap-2 w-3/4 rounded px-12 py-3 text-sm font-medium text-white shadow bg-tg-two"
+      ><RestaurantSVG />{t("botones.comida")}</a
+    >
+    <a
+      href={"/" + t("navegacion.bebidas")}
+      class="flex items-center justify-center gap-2 w-3/4 rounded px-12 py-3 text-sm font-medium text-white shadow bg-tg-two"
+      ><DrinkSVG />{t("botones.bebidas")}</a
+    >
   </div>
 </Section>

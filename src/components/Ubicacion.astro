@@ -5,19 +5,18 @@ import ArrowRightSM from "./icons/ArrowRightSM.astro";
 ---
 
 <Section
-  id={t("navegacion.ubicacion")}
+  id={t("navbar.ubicacion")}
   title={t("titulos.ubicacion")}
-  text="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+  text={t("textos.ubicacion")}
   maps="true"
 >
-
   <div class="mt-8 justify-center flex gap-4 text-center">
     <a
       href="https://goo.gl/maps/7x2PcLYsevPUUtnA7"
       target="_blank"
       class="flex items-center justify-center gap-2 rounded bg-tg-two px-12 py-3 text-sm font-medium text-white shadow sm:w-auto"
     >
-      Cómo llegar
+      {t("botones.comoLlegar")}
       <ArrowRightSM stroke="white" />
     </a>
   </div>
