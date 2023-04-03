@@ -1,23 +1,27 @@
 ---
-import i18next, { t, changeLanguage } from "i18next";
-import { Trans, HeadHrefLangs } from "astro-i18next/components";
-import LanguageSelector from "../../components/LanguageSelector.astro";
+import { t, changeLanguage } from "i18next";
 import Layout from "../../layouts/Layout.astro";
 import Navbar from "../../components/Navbar.astro";
-import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
+import TitleSection from "../../components/widgets/TitleSection.astro";
 
 changeLanguage("de");
 ---
 
 <Layout title="Tabgha">
-	<header>
-		<Navbar>
-			<LanguageSelector showFlag={true} class="bg-blue-200 p-1 rounded-full" />
-		</Navbar>
-	</header>
-
-    <h1>{t("navegacion.sentido")}</h1>
-
-	<Footer />
+  <header>
+    <Navbar />
+  </header>
+  <main class="flex justify-center sm:py-40 py-24 px-5">
+    <div class="max-w-screen-xl">
+      <TitleSection title={t("titulos.sentido")} customClass="p-6" />
+      <img
+        src="/img/Tabgha-Panes-y-Peces.jpg"
+        alt="Tabgha Panes y Peces"
+        class="mb-6 max-h-80 w-full m-auto object-cover rounded-md"
+      />
+      <p class="sm:text-xl whitespace-pre-wrap">{t("sentido.texto")}</p>
+    </div>
+  </main>
+  <Footer />
 </Layout>
