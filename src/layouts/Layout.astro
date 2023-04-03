@@ -1,12 +1,12 @@
 ---
-import '@fontsource/montserrat'
+import "@fontsource/montserrat";
 import "@fontsource/manrope";
 
 import i18next, { t, changeLanguage } from "i18next";
 import { HeadHrefLangs } from "astro-i18next/components";
 
 export interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
@@ -14,52 +14,27 @@ const { title } = Astro.props;
 
 <!DOCTYPE html>
 <html lang={i18next.language}>
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<HeadHrefLangs />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <HeadHrefLangs />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>
 
 <style is:global>
-	:root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
-	}
 	html {
 		font-family: "Montserrat", system-ui, sans-serif;
 		background-color: #f7f6ef;
 		scroll-behavior: smooth;
 	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
-	.patron-borde {
-		position: absolute;
-		height: 100px;
-		bottom: -3.5rem;
-		left: -10rem;
-		overflow: hidden;
-		right: 0;
-		z-index: 1;
-	}
-	@media (min-width: 768px) {
-		.patron-borde {
-			bottom: -1.5rem;
-			left: 0;
-		}
-	}
-	@media (min-width: 1280px) {
-		.patron-borde {
-			bottom: 0;
-			left: 0;
-		}
+
+	.shadow-tb {
+		text-shadow: black 0.1em 0.1em 0.2em;
 	}
 </style>
