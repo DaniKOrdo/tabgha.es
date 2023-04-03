@@ -10,15 +10,40 @@
     "comida": "food",
     "bebidas": "drinks"
   },
-  "titulos": {
+  "navbar": {
+    "inicio": "home",
     "sentido": "sinn",
+    "carta": "menu",
+    "noticias": "nachrichten",
+    "colabora": "zusammenarbeiten",
+    "ubicacion": "standort",
+    "contacto": "kontakt"
+  },
+  "botones": {
+    "carta": "Unser Menü",
+    "saberMas": "Mehr wissen",
+    "leerMas": "Mehr lesen",
+    "comida": "Essen",
+    "bebidas": "Getränke",
+    "comoLlegar": "Wie man hinkommt"
+  },
+  "titulos": {
+    "sentido": "SINN",
     "carta": "UNSERS MENÜ",
     "colabora": "ZUSAMMENARBEITEN",
     "noticias": "NACHRICHTEN",
     "ubicacion": "ORT"
   },
+  "portada": {
+    "descripcion": "Chiringuito am Strand von Portals Nous, Mallorca. Mit mediterraner Küche und einer entspannten, familiären Atmosphäre."
+  },
   "textos": {
-    "sentido": "Liebe Brüder und Schwestern, guten Morgen! Das Evangelium der Liturgie dieses Sonntags erzählt die berühmte Episode der Vermehrung von Brot und Fischen, mit denen Jesus den Hunger von fast fünftausend Menschen stillt, die sich versammelt hatten, um ihm zuzuhören (vgl. Joh 6,1-15). Es ist interessant zu sehen, wie dieses Wunder geschieht: Jesus erschafft das Brot und den Fisch nicht aus dem Nichts, sondern arbeitet mit dem, was die Jünger ihm bringen.",
-    "colabora": "Sie können mit unserem Projekt durch eine Spende über Bizum zusammenarbeiten. Sie können ein Solidaritätsmenü oder den gewünschten Betrag spenden."
+    "sentido": "Liebe Brüder und Schwestern, guten Tag! Das Evangelium der Liturgie dieses Sonntags erzählt die berühmte Geschichte von der Vermehrung der Brote und der Fische, mit denen Jesus etwa fünftausend Menschen speist, die gekommen waren, um ihn zu hören (vgl. Joh 6,1-15). Es ist interessant zu sehen, wie dieses Wunder erfolgt: Jesus erschafft die Brote und Fische nicht aus dem Nichts, nein, sondern er arbeitet mit dem, was ihm die Jünger bringen. Einer von ihnen sagt: »Hier ist ein kleiner Junge, der hat fünf Gerstenbrote und zwei Fische; doch was ist das für so viele?« (V. 9). Es ist wenig, es ist nichts, aber für Jesus ist es ausreichend.",
+    "carta": "Unsere Speisekarte bietet eine große Auswahl an köstlichen Gerichten und Getränken in unserer Strandbar. Von Snacks über Meeresfrüchte bis hin zu eisgekühlten Cocktails, kommen Sie und genießen Sie die Sonne und die Meeresbrise.",
+    "colabora": "Sie können unser Projekt mit einer Spende über Bizum unterstützen. Sie können ein Solidaritätsmenü oder einen beliebigen Betrag spenden.",
+    "ubicacion": "Wir befinden uns am wunderschönen Strand von Portals Nous, wo Sie unsere köstlichen Speisen und Getränke genießen können, während Sie sich bei einem atemberaubenden Blick auf das Mittelmeer entspannen."
+  },
+  "sentido": {
+    "texto": "Liebe Brüder und Schwestern, guten Tag!\n\nDas Evangelium der Liturgie dieses Sonntags erzählt die berühmte Geschichte von der Vermehrung der Brote und der Fische, mit denen Jesus etwa fünftausend Menschen speist, die gekommen waren, um ihn zu hören (vgl. Joh 6,1-15). Es ist interessant zu sehen, wie dieses Wunder erfolgt: Jesus erschafft die Brote und Fische nicht aus dem Nichts, nein, sondern er arbeitet mit dem, was ihm die Jünger bringen. Einer von ihnen sagt: »Hier ist ein kleiner Junge, der hat fünf Gerstenbrote und zwei Fische; doch was ist das für so viele?« (V. 9). Es ist wenig, es ist nichts, aber für Jesus ist es ausreichend.\n\nVersuchen wir nun, uns in diesen Jungen hineinzuversetzen. Die Jünger bitten ihn, alles zu teilen, was er zu essen hat. Es scheint ein sinnloses, ja ein ungerechtes Ansinnen zu sein. Warum sollte man einem Menschen, noch dazu einem Jungen, das wegnehmen, was er von zu Hause mitgebracht hat und das er von Rechts wegen behalten dürfen sollte? Warum sollte man jemandem etwas wegnehmen, das ohnehin nicht reicht, um alle satt zu machen? Aus menschlicher Sicht ist das nicht logisch. Für Gott aber schon. Ja, gerade dank dieser kleinen unentgeltlichen und daher heroischen Gabe kann Jesus alle speisen. Dies ist eine großartige Lehre für uns. Sie sagt uns, dass der Herr mit dem Wenigen, das wir ihm zur Verfügung stellen, eine Menge tun kann. Es wäre schön, wenn wir uns jeden Tag fragen würden: »Was bringe ich Jesus heute?« Er kann viel tun mit einem von uns gesprochenen Gebet, mit einer Geste der Nächstenliebe, die wir für andere tun, ja sogar mit unserer Armseligkeit, die wir seiner Barmherzigkeit überlassen. Jesus unsere Beschränktheiten überlassen, und er wirkt Wunder. Gott liebt es, so zu handeln: er tut große Dinge, ausgehend von den kleinen, unentgeltlichen.\n\nAlle großen Protagonisten der Bibel – von Abraham über Maria bis hin zu dem Jungen von heute – weisen diese Logik der Kleinheit und des Gebens auf. Die Logik des Gebens ist völlig anders als die unsere. Wir bemühen uns, das, was wir haben, anzuhäufen und vermehren; Jesus hingegen fordert dazu auf, zu geben, zu vermindern. Wir addieren gerne, wir fügen gerne hinzu; Jesus mag es, zu subtrahieren, etwas wegzunehmen, um es anderen zu geben. Wir wollen für uns selbst vermehren; Jesus schätzt es, wenn wir mit anderen teilen, wenn wir teilen. Es ist interessant, dass in den Berichten über die Vermehrung der Brote in den Evangelien das Verb »vermehren« nie vorkommt. Im Gegenteil, die verwendeten Verben stehen gerade unter dem umgekehrten Vorzeichen: »brechen«, »geben«, »austeilen« (vgl. V. 11; Mt 14,19; Mk 6,41; Lk 9,16). Aber das Verb »vermehren« wird nicht verwendet. Das wahre Wunder, sagt Jesus, ist nicht die Vermehrung, die Prahlerei und Macht hervorbringt, sondern das Teilen, das miteinander Teilen, das die Liebe mehrt und es Gott gestattet, Wunder zu tun. Lasst uns versuchen, mehr miteinander zu teilen, lasst uns diesen Weg ausprobieren, den Jesus uns lehrt.\n\nAuch heute noch löst die Vermehrung von Gütern keine Probleme, wenn es keine gerechte Verteilung gibt. Man denke nur an die Tragödie des Hungers, von der vor allem die Kleinsten betroffen sind. Es wurde – ganz offiziell – errechnet, dass jeden Tag auf der Welt etwa siebentausend Kinder unter fünf Jahren an mit der Unterernährung zusammenhängenden Ursachen sterben, weil sie nicht genug zum Leben haben. Angesichts solcher Skandale richtet Jesus auch an uns eine Aufforderung, eine Aufforderung, die jener gleicht, die der namenlose Junge im Evangelium wahrscheinlich erhalten hat und in dem wir uns alle wiedererkennen können: »Nur Mut, gib das Wenige, das du hast, deine Talente und deinen Besitz, stelle sie Jesus und deinen Brüdern zur Verfügung. Keine Angst, es geht nichts verloren, denn wenn du mit anderen teilst, dann vermehrt es Gott. Befreie dich von der falschen Bescheidenheit, dich unzulänglich zu fühlen, habe Vertrauen. Glaube an die Liebe, glaube an die Kraft des Dienens, glaube an die Kraft der Unentgeltlichkeit«.\n\nMöge die Jungfrau Maria, die auf den beispiellosen Vorschlag Gottes mit »Ja« geant\n\nPapst Franziskus\n\nAngelus 25. Juli 2021"
   }
 }
