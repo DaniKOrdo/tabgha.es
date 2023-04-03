@@ -3,40 +3,63 @@ import i18next, { t } from "i18next";
 import { localizePath } from "astro-i18next";
 
 const isCurrentPath = (path) => {
-    const { pathname } = Astro.url;
-    const currentNormalizedPath = pathname.replace(/\/$/, "");
-    path = path.replace(/\/$/, "");
-    return currentNormalizedPath === path;
+  const { pathname } = Astro.url;
+  const currentNormalizedPath = pathname.replace(/\/$/, "");
+  path = path.replace(/\/$/, "");
+  return currentNormalizedPath === path;
 };
 
+const { pathname } = Astro.url;
+
 const navigationItems = {
-    "/": t("navegacion.inicio"),
-    "/sentido/": t("navegacion.sentido"),
-    "/noticias/": t("navegacion.noticias"),
-    "/ubicacion/": t("navegacion.ubicacion"),
-    "/contacto/": t("navegacion.contacto"),
+  "/": t("navbar.inicio"),
+  "/sentido/": t("navbar.sentido"),
+  "/carta/": t("navbar.carta"),
+  "/noticias/": t("navbar.noticias"),
+  "/ubicacion/": t("navbar.ubicacion"),
+  "/contacto/": t("navbar.contacto"),
 };
 ---
 
-<footer class="bottom-0 w-full p-4 bg-tb-postHeader bg-opacity-80 rounded-t-lg shadow md:flex md:items-center md:justify-between md:p-6">
-    <span class="text-sm text-white sm:text-cente">© 2023 Tabgha</span>
-    <ul class="flex flex-wrap items-center mt-3 text-sm text-white sm:mt-0">
-        {
-            Object.keys(navigationItems).map((key) => {
-                let className = "mr-4 hover:underline md:mr-6";
-                if (isCurrentPath(localizePath(key, i18next.language))) {
-                    className += " font-semibold";
-                } else {
-                    className += " opacity-75 hover:opacity-100 hover:underline decoration-gray-300";
-                }
-                return (
-                    <li>
-                        <a class={className} href={localizePath(key, i18next.language)}>
-                            {navigationItems[key]}
-                        </a>
-                    </li>
-                );
-            })
+<footer
+  class="bottom-0 w-full p-4 bg-tb-postHeader bg-opacity-80 rounded-t-lg shadow md:flex md:items-center md:justify-between md:p-6"
+>
+  <span class="text-sm text-white sm:text-cente">© 2023 TABGHA</span>
+  <ul class="flex flex-wrap items-center mt-3 text-sm text-white sm:mt-0">
+    {
+      Object.keys(navigationItems).map((key) => {
+        let className = "mr-4 hover:underline md:mr-6 uppercase";
+        if (isCurrentPath(localizePath(key, i18next.language))) {
+          className += " font-semibold";
+        } else {
+          className +=
+            " opacity-75 hover:opacity-100 hover:underline decoration-gray-300";
         }
-    </ul>
+
+        if (
+          pathname === "/" ||
+          pathname === "/ca" ||
+          pathname === "/en" ||
+          pathname === "/de"
+        ) {
+          return (
+            <a class={className} href={`#${navigationItems[key]}`}>
+              {navigationItems[key]}
+            </a>
+          );
+        } else {
+          return (
+            <a
+              class={className}
+              href={`${localizePath("/", i18next.language)}#${
+                navigationItems[key]
+              }`}
+            >
+              {navigationItems[key]}
+            </a>
+          );
+        }
+      })
+    }
+  </ul>
 </footer>
