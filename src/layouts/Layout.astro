@@ -4,12 +4,7 @@ import "@fontsource/manrope";
 
 import i18next, { t } from "i18next";
 import { HeadHrefLangs } from "astro-i18next/components";
-
-export interface Props {
-  title: string;
-}
-
-const { title } = Astro.props;
+import Metatags from "../components/Metatags.astro";
 ---
 
 <!DOCTYPE html>
@@ -21,6 +16,7 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <HeadHrefLangs />
     <title>{t("site.inicio")}</title>
+    <Metatags />
     <link rel="sitemap" href="/sitemap-index.xml">
   </head>
   <body>
