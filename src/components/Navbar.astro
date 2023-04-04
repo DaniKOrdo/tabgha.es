@@ -4,7 +4,6 @@ import { localizePath } from "astro-i18next";
 import  LanguageSelectorLOCAL  from "./LanguageSelector.astro";
 import  {LanguageSelector}  from "astro-i18next/components";
 
-import tabghaLogo from '/img/tabgha-logo.png'
 const { pathname } = Astro.url;
 
 const isCurrentPath = (path) => {
@@ -15,7 +14,6 @@ const isCurrentPath = (path) => {
 };
 
 const navigationItems = {
-    "/": t("navbar.inicio"),
     "/sentido/": t("navbar.sentido"),
     "/carta/": t("navbar.carta"),
     "/noticias/": t("navbar.noticias"),
@@ -23,12 +21,19 @@ const navigationItems = {
     "/contacto/": t("navbar.contacto"),
 };
 
+const validPathnames = ["/", "/ca", "/en", "/de"];
+
+let homePath = localizePath('/', i18next.language);
+
+if (validPathnames.includes(pathname)) {
+    homePath += `#${t('navbar.inicio')}`;
+}
 ---
 
-<nav class="absolute w-full z-10 bg-white bg-opacity-70 border-gray-200 px-2 sm:px-4 py-2.5 rounded-b">
+<nav class="absolute w-full z-10 bg-[#f7f6ef] bg-opacity-90 border-gray-200 px-2 sm:px-4 py-2.5 rounded-b">
     <div class="container flex flex-wrap items-center justify-between mx-auto">
-        <a href={localizePath('/', i18next.language)} class="flex items-center">
-            <img src={tabghaLogo} class="h-9 mr-3 ml-3 sm:h-9" alt="Tabgha Logo" />
+        <a href={homePath} class="flex items-center">
+            <img src="/img/tabgha-logo.svg" class="h-9 mr-3 ml-3 sm:h-9" alt="Tabgha Logo" />
             <span class="self-center text-xl font-semibold whitespace-nowrap">TABGHA</span>
         </a>
         <LanguageSelectorLOCAL showFlag={true} class="bg-tg-two bg-opacity-20 p-1 rounded-full cursor-pointer" />
@@ -44,38 +49,26 @@ const navigationItems = {
                         if (isCurrentPath(localizePath(key, i18next.language))) className += " underline decoration-tg-two";
                         else className += " opacity-75 hover:opacity-100 hover:underline decoration-gray-300";
 
-                        if (pathname === "/" || pathname === "/ca" || pathname === "/en" || pathname === "/de") {
+                        if (validPathnames.includes(pathname)) {
                             return (
-                                <a class={className} href={`#${navigationItems[key]}`}>
-                                    {navigationItems[key]}
-                                </a>
+                                <li>
+                                    <a class={className} href={`#${navigationItems[key]}`}>
+                                        {navigationItems[key]}
+                                    </a>
+                                </li>
                             );
                         }
                         else {
                             return (
+                            <li>
                                 <a class={className} href={`${localizePath('/', i18next.language)}#${navigationItems[key]}`}>
                                     {navigationItems[key]}
                                 </a>
+                            </li>
                             );
                         }
                     })
                 }
-
-                <!-- <li>
-                    <a href="/" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0" aria-current="page">{t('navegacion.carta')}</a>
-                </li>
-                <li>
-                    <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">{t('navegacion.sentido')}</a>
-                </li>
-                <li>
-                    <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">{t('navegacion.noticias')}</a>
-                </li>
-                <li>
-                    <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">{t('navegacion.ubicacion')}</a>
-                </li>
-                <li>
-                    <a href="/contacto" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">{t('navegacion.contacto')}</a>
-                </li> -->
             </ul>
         </div>
     </div>
