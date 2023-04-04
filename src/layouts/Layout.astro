@@ -2,7 +2,7 @@
 import "@fontsource/montserrat";
 import "@fontsource/manrope";
 
-import i18next, { t, changeLanguage } from "i18next";
+import i18next, { t } from "i18next";
 import { HeadHrefLangs } from "astro-i18next/components";
 
 export interface Props {
@@ -20,7 +20,8 @@ const { title } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <HeadHrefLangs />
-    <title>{title}</title>
+    <title>{t("site.inicio")}</title>
+    <link rel="sitemap" href="/sitemap-index.xml">
   </head>
   <body>
     <slot />
@@ -37,4 +38,14 @@ const { title } = Astro.props;
 	.shadow-tb {
 		text-shadow: black 0.1em 0.1em 0.2em;
 	}
+
+  ::-moz-selection { /* Code for Firefox */
+    color: #e6be8f;
+    background: #254B5E;
+  }
+
+  ::selection {
+    color: #e6be8f;
+    background: #254B5E;
+  }
 </style>
