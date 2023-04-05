@@ -4,7 +4,6 @@ module.exports = {
 	theme: {
 		extend: {
 			backgroundImage: {
-				'portals-nous': "url('/img/portals-nous.jpg')",
 				'tabgha-beach': "url('/img/tabgha-beach.jpeg')",
 				'tabgha-beach-mobile': "url('/img/tabgha-beach-mobile.jpeg')"
 			},
