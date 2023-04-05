@@ -1,4 +1,10 @@
 {
+  "site": {
+    "inicio": "Tabgha | Xiringuito Platja Portals Nous",
+    "sentido": "Tabgha | Sentit",
+    "descripcion": "Xiringuito a la platja de Portals Nous, Mallorca. Amb una cuina mediterrània i un ambient relaxat i familiar.",
+    "keywords": "tabgha, guingueta, chiringuito, xiringuito, portals nous, playa"
+  },
   "navegacion": {
     "inicio": "home",
     "sentido": "sense",

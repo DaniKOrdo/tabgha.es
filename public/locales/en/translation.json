@@ -1,4 +1,10 @@
 {
+  "site": {
+    "inicio": "Tabgha | Portals Nous beach bar",
+    "sentido": "Tabgha | Sense",
+    "descripcion": "Beach bar on the beach of Portals Nous, Majorca. With Mediterranean cuisine and a relaxed and familiar atmosphere.",
+    "keywords": "tabgha, beach bar, portals nous, beach"
+  },
   "navegacion": {
     "inicio": "home",
     "sentido": "sense",

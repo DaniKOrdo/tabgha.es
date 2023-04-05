@@ -1,4 +1,10 @@
 {
+  "site": {
+    "inicio": "Tabgha | Chiringuito Playa Portals Nous",
+    "sentido": "Tabgha | Sentido",
+    "descripcion": "Chiringuito en la playa de Portals Nous, Mallorca. Con una cocina mediterránea y un ambiente relajado y familiar.",
+    "keywords": "tabgha, chiringuito, portals nous, playa"
+  },
   "navegacion": {
     "inicio": "inicio",
     "sentido": "sentido",

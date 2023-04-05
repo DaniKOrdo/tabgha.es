@@ -1,4 +1,10 @@
 {
+  "site": {
+    "inicio": "Tabgha | Portals Nous Strandbar",
+    "sentido": "Tabgha | Sinn",
+    "descripcion": "Strandbar von Portals Nous, Mallorca. Mit mediterraner Küche und einer entspannten und familiären Atmosphäre.",
+    "keywords": "tabgha, strandbar, chiringuito, portals nous, strand"
+  },
   "navegacion": {
     "inicio": "home",
     "sentido": "sense",
