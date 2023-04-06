@@ -43,20 +43,22 @@ const navigationItems = {
           pathname === "/de"
         ) {
           return (
-            <a class={className} href={`#${navigationItems[key]}`}>
-              {navigationItems[key]}
-            </a>
+            <li>
+              <a class={className} href={`#${navigationItems[key]}`}>
+                {navigationItems[key]}
+              </a>
+            </li>
           );
         } else {
           return (
-            <a
-              class={className}
-              href={`${localizePath("/", i18next.language)}#${
-                navigationItems[key]
-              }`}
-            >
-              {navigationItems[key]}
-            </a>
+            <li>
+              <a
+                class={className}
+                href={`${localizePath("/", i18next.language)}#${navigationItems[key]}`}
+              >
+                {navigationItems[key]}
+              </a>
+            </li>
           );
         }
       })
