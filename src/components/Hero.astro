@@ -9,9 +9,9 @@ import ArrowRightSM from './icons/ArrowRightSM.astro'
   <span class="absolute inset-0 bg-gradient-to-b from-black/0 to-black/60 sm:bg-transparent sm:bg-gradient-to-r sm:from-black/0 sm:to-black/60"></span>
   <img src="/img/wave.svg" alt="ola playa" class="absolute inset-x-0 bottom-[-1px]">
 
-  <div class="relative text-white mx-auto max-w-screen-xl md:py-32 py-5 px-6 sm:flex sm:flex-row-reverse md:h-screen sm:items-center lg:px-8">
-    <div class="max-w-xl text-center justify-center sm:bg-opacity-60 bg-opacity-30 p-9 rounded-xl ">
-      <img src="/img/tabgha-logo.svg" alt="Tabgha Logo" class="md:p-16 p-8 m-auto">
+  <div class="relative text-white mx-auto max-w-screen-xl md:py-32 py-5 px-6 sm:flex sm:flex-row-reverse xl:h-screen sm:items-center lg:px-8">
+    <div class="max-w-xl text-center justify-center sm:bg-opacity-60 bg-opacity-30 p-9 rounded-xl">
+      <img src="/img/tabgha-logo.svg" alt="Tabgha Logo" class="md:p-16 p-8 m-auto tg-logo-size">
         <h1 class="text-5xl font-extrabold sm:text-5xl shadow-tb">
           TABGHA
             <span class="text-4xl font-tg-title block font-extrabold text-tg-sand shadow-tb">
@@ -37,3 +37,11 @@ import ArrowRightSM from './icons/ArrowRightSM.astro'
     </div>
   </div>
 </section>
+
+<style>
+  @media (max-height: 900px) and (min-width: 640px) {
+    .tg-logo-size {
+      max-width: 80%;
+    }
+  }
+</style>
