@@ -1,8 +1,33 @@
 ---
 import i18next from "i18next";
 import { localizePath } from "astro-i18next";
-import localeEmoji from "locale-emoji";
+// import localeEmoji from "locale-emoji";
 import ISO6991 from "iso-639-1";
+
+let defaults = {
+  es: 'ES',
+  ca: 'ES-CT',
+  en: 'GB',
+  de: 'DE',
+};
+
+function localeEmoji(locale: string) {
+  let split = locale.toUpperCase().split(/-|_/);
+  let lang = split.shift();
+  let code = split.pop();
+
+  if (!/^[A-Z]{2}$/.test(code)) {
+    code = defaults[lang.toLowerCase()];
+  }
+
+  if (!code) {
+    return '';
+  }
+
+  const a = String.fromCodePoint(code.codePointAt(0) - 0x41 + 0x1F1E6);
+  const b = String.fromCodePoint(code.codePointAt(1) - 0x41 + 0x1F1E6);
+  return a + b;
+};
 
 interface languageMapping {
   [localeCode: string]: string;
@@ -25,7 +50,6 @@ const { showFlag = false, languageMapping, ...attributes } = Astro.props;
   {
     supportedLanguages.map((supportedLanguage: string) => {
       let value = localizePath(pathname, supportedLanguage);
-      console.log(value)
       const flag = showFlag ? localeEmoji(supportedLanguage) + " " : "";
 
       let nativeName = "";
