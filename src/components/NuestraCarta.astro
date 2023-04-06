@@ -1,4 +1,5 @@
 ---
+import { localizePath } from "astro-i18next";
 import i18next, { t } from "i18next";
 import Section from "./widgets/Section.astro";
 import RestaurantSVG from "./icons/Restaurant.astro";
@@ -24,12 +25,12 @@ const imgMenu =
     class="justify-center flex flex-col items-center text-center mt-8 gap-4 w-full"
   >
     <a
-      href={"/" + t("navegacion.comida")}
+      href={localizePath(t("navegacion.carta"))}
       class="flex items-center justify-center gap-2 w-3/4 rounded px-12 py-3 text-sm font-medium text-white shadow bg-tg-two"
       ><RestaurantSVG />{t("botones.comida")}</a
     >
     <a
-      href={"/" + t("navegacion.bebidas")}
+      href={localizePath(t("navegacion.carta"))}
       class="flex items-center justify-center gap-2 w-3/4 rounded px-12 py-3 text-sm font-medium text-white shadow bg-tg-two"
       ><DrinkSVG />{t("botones.bebidas")}</a
     >
