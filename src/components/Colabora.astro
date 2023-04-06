@@ -1,15 +1,24 @@
 ---
-import { t } from "i18next";
+import i18next, { t } from "i18next";
 import Section from "./widgets/Section.astro";
 import ArrowRightSM from "./icons/ArrowRightSM.astro";
+
+const lang = i18next.language;
+
+const imgMenu = () => {
+  if(lang === "es") return "/img/colabora-es.jpg"
+  if(lang === "ca") return "/img/colabora-ca.jpg"
+  if(lang === "en") return "/img/colabora-en.jpg"
+  if(lang === "de") return "/img/colabora-de.jpg"
+}
 ---
 
 <Section
   id={t("navbar.colabora")}
   title={t("titulos.colabora")}
   text={t("textos.colabora")}
-  img="/img/colabora.png"
-  alt="Tabgha-Panes-y-Peces"
+  img={imgMenu()}
+  alt="Tabgha solidario colabora"
 >
   <div class="mt-8 justify-center flex gap-4 text-center">
     <a
