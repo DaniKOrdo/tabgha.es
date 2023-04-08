@@ -1,0 +1,41 @@
+---
+const { country } = Astro.props
+---
+
+{country === 'es' && (
+  <svg xmlns="http://www.w3.org/2000/svg" width="34" height="23">
+    <path d="M0 0h34v23H0z" style="fill:#c60b1e;fill-opacity:1;stroke:none"/>
+    <path d="M0 5.75h34v11.5H0Zm0 0" style="stroke:none;fill-rule:nonzero;fill:#ffc400;fill-opacity:1"/>
+  </svg>
+)}
+
+{country === 'ca' && (
+  <svg xmlns="http://www.w3.org/2000/svg" width="34" height="23">
+    <path d="M0 0h34v23H0z" style="fill:#fcdd09;fill-opacity:1;stroke:none"/>
+    <path d="M0 89.969429h810m0 120.050951H0m0 119.95924h810m0 120.050951H0" style="fill-rule:nonzero;fill:#000;fill-opacity:1;stroke-width:60;stroke-linecap:butt;stroke-linejoin:miter;stroke:#da121a;stroke-opacity:1;stroke-miterlimit:4" transform="scale(.0419753 .0425926)"/>
+  </svg>
+)}
+
+{country === 'en' && (
+  <svg xmlns="http://www.w3.org/2000/svg" width="34" height="23">
+    <defs>
+      <clipPath id="a">
+        <path d="M17 11.5h17V23Zm0 0V23H0Zm0 0H0V0Zm0 0V0h17Zm0 0"/>
+      </clipPath>
+    </defs>
+    <path d="M0 0h34v23H0z" style="fill:#012169;fill-opacity:1;stroke:none"/>
+    <path d="m0 0 50 30m0-30L0 30" style="fill-rule:nonzero;fill:#000;fill-opacity:1;stroke-width:6;stroke-linecap:butt;stroke-linejoin:miter;stroke:#fff;stroke-opacity:1;stroke-miterlimit:4" transform="scale(.68 .766667)"/>
+    <g clip-path="url(#a)">
+      <path d="m0 0 50 30m0-30L0 30" style="fill-rule:nonzero;fill:#000;fill-opacity:1;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke:#c8102e;stroke-opacity:1;stroke-miterlimit:4" transform="scale(.68 .766667)"/>
+    </g>
+    <path d="M-.99954 11.00034h22.001378V-.998641h7.996324V11.00034H50.99954v7.99932H28.998162v11.998981h-7.996324V18.99966H-.99954Zm0 0" style="fill-rule:nonzero;fill:#c8102e;fill-opacity:1;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke:#fff;stroke-opacity:1;stroke-miterlimit:4" transform="scale(.68 .766667)"/>
+  </svg>
+)}
+
+{country === 'de' && (
+  <svg xmlns="http://www.w3.org/2000/svg" width="34" height="23">
+    <path d="M0 0h34v23H0z" style="fill:#000;fill-opacity:1;stroke:none"/>
+    <path d="M0 7.667969h34V23H0Zm0 0" style="stroke:none;fill-rule:nonzero;fill:#d00;fill-opacity:1"/>
+    <path d="M0 15.332031h34V23H0Zm0 0" style="stroke:none;fill-rule:nonzero;fill:#ffce00;fill-opacity:1"/>
+  </svg>
+)}

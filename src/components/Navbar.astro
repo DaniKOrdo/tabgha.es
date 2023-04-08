@@ -3,8 +3,13 @@ import i18next, { t } from "i18next";
 import { localizePath } from "astro-i18next";
 import  LanguageSelectorLOCAL  from "./LanguageSelector.astro";
 import  {LanguageSelector}  from "astro-i18next/components";
+import Flags from "./widgets/Flags.astro";
 
 const { pathname } = Astro.url;
+
+let homePath = localizePath('/', i18next.language);
+
+const currentNormalizedPath = homePath.replace(/^\/+/g, "") === "" ? "es" : homePath.replace(/^\/+/g, "");
 
 const isCurrentPath = (path) => {
     const { pathname } = Astro.url;
@@ -24,8 +29,6 @@ const navigationItems = {
 
 const validPathnames = ["/", "/ca", "/en", "/de"];
 
-let homePath = localizePath('/', i18next.language);
-
 if (validPathnames.includes(pathname)) {
     homePath += `#${t('navbar.inicio')}`;
 }
@@ -35,9 +38,12 @@ if (validPathnames.includes(pathname)) {
     <div class="container flex flex-wrap items-center justify-between mx-auto">
         <a href={homePath} class="flex items-center">
             <img src="/img/tabgha-logo.svg" class="h-9 mr-3 ml-3 sm:h-9" alt="Tabgha Logo" />
-            <span class="self-center text-xl font-semibold whitespace-nowrap md:hidden xl:block">TABGHA</span>
+            <span class="self-center text-xl font-semibold whitespace-nowrap md:hidden xl:block logoName">TABGHA</span>
         </a>
-        <LanguageSelectorLOCAL showFlag={true} class="bg-tg-two bg-opacity-20 p-1 rounded-full cursor-pointer" />
+        <div class="bg-gray-300 p-1 rounded-full cursor-pointer flex items-center pl-3">
+            <Flags country={currentNormalizedPath}/>
+            <LanguageSelectorLOCAL showFlag={false} class="bg-gray-300 p-1 rounded-full cursor-pointer" />
+        </div>
         <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-default" aria-expanded="false">
             <span class="sr-only">Menu</span>
             <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
@@ -62,7 +68,7 @@ if (validPathnames.includes(pathname)) {
                         else {
                             return (
                             <li class="md:py-0 py-2">
-                                <a class={className} href={`${localizePath('/', i18next.language)}#${navigationItems[key]}`}>
+                                <a class={className} href={`${homePath}#${navigationItems[key]}`}>
                                     {navigationItems[key]}
                                 </a>
                             </li>
@@ -74,6 +80,14 @@ if (validPathnames.includes(pathname)) {
         </div>
     </div>
 </nav>
+
+<style>
+    @media (max-width: 367px) {
+        .logoName {
+            display: none;
+        }
+    }
+</style>
 
 <script is:inline>
     document.addEventListener('DOMContentLoaded', function() {
