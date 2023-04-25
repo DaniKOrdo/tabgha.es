@@ -1,0 +1,43 @@
+---
+import i18next, { t, changeLanguage } from "i18next";
+import { Trans, HeadHrefLangs } from "astro-i18next/components";
+import { localizePath } from "astro-i18next";
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import Footer from "../../components/Footer.astro";
+import ArrowRightSM from "../../components/icons/ArrowRightSM.astro";
+
+changeLanguage("ca");
+
+const { pathname } = Astro.url;
+let homePath = localizePath("/", i18next.language);
+const validPathnames = ["/", "/ca", "/en", "/de"];
+if (validPathnames.includes(pathname)) {
+    homePath += `#${t("navbar.inicio")}`;
+}
+---
+
+<Layout title="Tabgha | Error 404">
+	<header>
+		<Navbar />
+	</header>
+	<section class="flex items-center h-[95vh] p-16">
+        <div class="container flex flex-col items-center justify-center px-5 mx-auto my-8">
+            <div class="max-w-md text-center">
+                <h2 class="mb-8 font-extrabold text-9xl text-tg-two">
+                    <span class="sr-only">Error</span>404
+                </h2>
+                <p class="text-2xl font-semibold md:text-3xl">{t("404.titulo")}</p>
+                <p class="mt-4 mb-8">{t("404.descripcion")}</p>
+                <a rel="noopener noreferrer" href={ homePath } class="flex items-center justify-center px-8 py-3 font-semibold rounded bg-tg-two text-white">
+                    <span style="transform: rotate(180deg)" class="px-2">
+                        <ArrowRightSM stroke="white"/>
+                    </span>
+                    {t("404.boton")}
+                </a>
+            </div>
+        </div>
+    </section>
+
+	<Footer />
+</Layout>

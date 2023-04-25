@@ -40,6 +40,11 @@
     "bebidas": "Begudes",
     "comoLlegar": "Com arribar"
   },
+  "404": {
+    "titulo": "Ho sentim, no hem pogut trobar aquesta pàgina.",
+    "descripcion": "Però no us preocupeu, podeu trobar moltes altres coses a la nostra pàgina d'inici.",
+    "boton": "Torna a la pàgina d'inici"
+  },
   "portada": {
     "descripcion": "Xiringuito a la platja de Portals Nous, Mallorca. Amb una cuina mediterrània i un ambient relaxat i familiar."
   },

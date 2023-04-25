@@ -40,6 +40,11 @@
     "bebidas": "Bebidas",
     "comoLlegar": "Cómo llegar"
   },
+  "404": {
+    "titulo": "Lo sentimos, no hemos podido encontrar esta página.",
+    "descripcion": "Pero no se preocupe, puede encontrar muchas otras cosas en nuestra página principal.",
+    "boton": "Volver a la página de inicio"
+  },
   "portada": {
     "descripcion": "Chiringuito en la playa de Portals Nous, Mallorca. Con una cocina mediterránea y un ambiente relajado y familiar."
   },

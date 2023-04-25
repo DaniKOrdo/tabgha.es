@@ -25,6 +25,13 @@
     "ubicacion": "standort",
     "contacto": "kontakt"
   },
+  "titulos": {
+    "sentido": "SINN",
+    "carta": "UNSERS MENÜ",
+    "colabora": "ZUSAMMENARBEITEN",
+    "noticias": "NACHRICHTEN",
+    "ubicacion": "ORT"
+  },
   "botones": {
     "carta": "Unser Menü",
     "saberMas": "Mehr wissen",
@@ -33,12 +40,10 @@
     "bebidas": "Getränke",
     "comoLlegar": "Wie man hinkommt"
   },
-  "titulos": {
-    "sentido": "SINN",
-    "carta": "UNSERS MENÜ",
-    "colabora": "ZUSAMMENARBEITEN",
-    "noticias": "NACHRICHTEN",
-    "ubicacion": "ORT"
+  "404": {
+    "titulo": "Tut uns leid, wir konnten diese Seite nicht finden.",
+    "descripcion": "Aber keine Sorge, Sie können viele andere Dinge auf unserer Homepage finden.",
+    "boton": "Zurück zur Homepage"
   },
   "portada": {
     "descripcion": "Chiringuito am Strand von Portals Nous, Mallorca. Mit mediterraner Küche und einer entspannten, familiären Atmosphäre."
