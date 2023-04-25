@@ -1,15 +1,34 @@
 ---
 import { t } from "i18next";
 import TitleSection from "./widgets/TitleSection.astro";
+
+import { contentfulClient } from "../lib/contentful";
+import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
+import type { Document } from "@contentful/rich-text-types";
+import NoticiasGrupo from "./NoticiasGrupo.astro";
+
+// interface Noticias {
+//     imagen: any,
+//     fecha: Date,
+//     titulo: string,
+//     descripcion: string
+// }
+
+const entries = await contentfulClient.getEntries({
+  content_type: "noticias",
+});
 ---
 
 <section id={t("navbar.noticias")} class="flex justify-center">
-    <div class="flex flex-col sm:flex-row gap-4 items-center text-black max-w-screen-xl p-8 max-m-32 md:m-12 rounded-xl">
+  <div
+    class="flex flex-col sm:flex-row gap-4 items-center text-black max-w-screen-xl p-8 max-m-32 md:m-12 rounded-xl"
+  >
     <div class="container mx-auto p-8">
       <div class="-mx-4 flex flex-wrap justify-center">
         <div class="w-full">
-          <div class="flex flex-col justify-center items-center mx-auto mb-8 max-w-[510px] text-center">
-
+          <div
+            class="flex flex-col justify-center items-center mx-auto mb-8 max-w-[510px] text-center"
+          >
             <TitleSection title={t("titulos.noticias")} />
 
             <p class="mt-4 max-w-lg sm:text-xl">
@@ -20,93 +39,25 @@ import TitleSection from "./widgets/TitleSection.astro";
         </div>
       </div>
       <div class="-mx-4 flex flex-wrap">
-        <div class="w-full px-4 md:w-1/2 lg:w-1/3">
-          <div class="mx-auto mb-10 max-w-[370px]">
-            <div class="mb-8 overflow-hidden rounded">
-              <img
-                src="/img/noticia1.jpg"
-                alt="image"
-                class="w-full"
+        <!-- {
+          <NoticiasGrupo
+            imagen={entries.items[0].fields.imagen.fields.file.url}
+            fecha={entries.items[0].fields.fecha}
+            titulo={entries.items[0].fields.titulo}
+            descripcion={entries.items[0].fields.descripcion}
+          />
+        } -->
+        {
+          entries.items.map((item) => (
+              <NoticiasGrupo
+                imagen={item.fields.imagen.fields.file.url}
+                fecha={item.fields.fecha}
+                titulo={item.fields.titulo}
+                descripcion={item.fields.descripcion}
               />
-            </div>
-            <div>
-              <span
-                class="bg-tg-two mb-5 inline-block rounded py-1 px-4 text-center text-xs font-semibold leading-loose text-white"
-              >
-                Mar 15, 2023
-              </span>
-              <h3>
-                <span
-                  class="text-dark hover:text-primary mb-4 inline-block text-xl font-semibold sm:text-2xl lg:text-xl xl:text-2xl"
-                >
-                  Próxima apertura
-              </span>
-              </h3>
-              <p class="text-body-color text-base">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="w-full px-4 md:w-1/2 lg:w-1/3">
-          <div class="mx-auto mb-10 max-w-[370px]">
-            <div class="mb-8 overflow-hidden rounded">
-              <img
-                src="/img/noticia2.jpg"
-                alt="image"
-                class="w-full"
-              />
-            </div>
-            <div>
-              <span
-                class="bg-tg-two mb-5 inline-block rounded py-1 px-4 text-center text-xs font-semibold leading-loose text-white"
-              >
-                Mar 18, 2023
-              </span>
-              <h3>
-                <span
-                  class="text-dark hover:text-primary mb-4 inline-block text-xl font-semibold sm:text-2xl lg:text-xl xl:text-2xl"
-                >
-                  Nuestro sentido
-                </span>
-              </h3>
-              <p class="text-body-color text-base">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="w-full px-4 md:w-1/2 lg:w-1/3">
-          <div class="mx-auto mb-10 max-w-[370px]">
-            <div class="mb-8 overflow-hidden rounded">
-              <img
-                src="/img/noticia3.jpg"
-                alt="image"
-                class="w-full"
-              />
-            </div>
-            <div>
-              <span
-                class="bg-tg-two mb-5 inline-block rounded py-1 px-4 text-center text-xs font-semibold leading-loose text-white"
-              >
-                May 07, 2023
-              </span>
-              <h3>
-                <span
-                  class="text-dark hover:text-primary mb-4 inline-block text-xl font-semibold sm:text-2xl lg:text-xl xl:text-2xl"
-                >
-                  Ya estamos abiertos!
-                </span>
-              </h3>
-              <p class="text-body-color text-base">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
-              </p>
-            </div>
-          </div>
-        </div>
+          ))
+        }
       </div>
-    </div> </div>
-  </section>
+    </div>
+  </div>
+</section>
