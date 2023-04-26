@@ -1,0 +1,41 @@
+---
+import i18next, { t, changeLanguage } from "i18next";
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import { contentfulClient } from "../../lib/contentful";
+import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
+import type { Noticia } from "../../lib/contentful";
+import Footer from "../../components/Footer.astro";
+
+changeLanguage("es");
+
+export async function getStaticPaths() {
+    const { items } = await contentfulClient.getEntries<Noticia>({
+        content_type: "noticias",
+    });
+    const pages = items.map((item) => ({
+        params: { slug: item.fields.url },
+        props: {
+            titulo: item.fields.titulo,
+            contenido: documentToHtmlString(item.fields.contenido),
+            fecha: new Date(item.fields.fecha).toLocaleDateString(),
+        },
+    }));
+    return pages;
+}
+const { contenido, titulo, fecha } = Astro.props;
+const pageTitle = `Tabgha | ${titulo}/`;
+---
+
+<Layout title={ pageTitle }>
+	<header>
+		<Navbar />
+	</header>
+	<main>
+		<h1>{titulo}</h1>
+        <time>{fecha}</time>
+        <article set:html={contenido} />
+	</main>
+
+	<Footer />
+</Layout>

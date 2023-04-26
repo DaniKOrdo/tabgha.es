@@ -1,21 +1,24 @@
 ---
 import { t } from "i18next";
 import TitleSection from "./widgets/TitleSection.astro";
-
-import { contentfulClient } from "../lib/contentful";
-import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
-import type { Document } from "@contentful/rich-text-types";
 import NoticiasGrupo from "./NoticiasGrupo.astro";
 
-// interface Noticias {
-//     imagen: any,
-//     fecha: Date,
-//     titulo: string,
-//     descripcion: string
-// }
+import { contentfulClient } from "../lib/contentful";
+import type { Noticia } from "../lib/contentful";
 
-const entries = await contentfulClient.getEntries({
+const entries = await contentfulClient.getEntries<Noticia>({
   content_type: "noticias",
+});
+
+const posts = entries.items.map((item) => {
+  const { imagenPortada, fecha, titulo, descripcion, url  } = item.fields;
+  return {
+    imagenPortada,
+    fecha: new Date(fecha).toLocaleDateString(),
+    titulo,
+    descripcion,
+    url
+  };
 });
 ---
 
@@ -39,6 +42,15 @@ const entries = await contentfulClient.getEntries({
         </div>
       </div>
       <div class="-mx-4 flex flex-wrap">
+        {posts.map((post) => (
+          <NoticiasGrupo
+            imagen={post.imagenPortada.fields.file.url}
+            fecha={post.fecha}
+            titulo={post.titulo}
+            descripcion={post.descripcion}
+            url={post.url}
+          />
+          ))}
         <!-- {
           <NoticiasGrupo
             imagen={entries.items[0].fields.imagen.fields.file.url}
@@ -47,7 +59,7 @@ const entries = await contentfulClient.getEntries({
             descripcion={entries.items[0].fields.descripcion}
           />
         } -->
-        {
+        <!-- {
           entries.items.map((item) => (
               <NoticiasGrupo
                 imagen={item.fields.imagen.fields.file.url}
@@ -56,7 +68,7 @@ const entries = await contentfulClient.getEntries({
                 descripcion={item.fields.descripcion}
               />
           ))
-        }
+        } -->
       </div>
     </div>
   </div>
