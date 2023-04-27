@@ -1,14 +1,14 @@
 ---
 import i18next, { t, changeLanguage } from "i18next";
-import Layout from "../../layouts/Layout.astro";
-import Navbar from "../../components/Navbar.astro";
-import Footer from "../../components/Footer.astro";
-import { contentfulClient } from "../../lib/contentful";
+import Layout from "../../../layouts/Layout.astro";
+import Navbar from "../../../components/Navbar.astro";
+import Footer from "../../../components/Footer.astro";
+import { contentfulClient } from "../../../lib/contentful";
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 import { BLOCKS, INLINES } from "@contentful/rich-text-types";
-import type { Noticia } from "../../lib/contentful";
+import type { Noticia } from "../../../lib/contentful";
 
-changeLanguage("es");
+changeLanguage("ca");
 
 export async function getStaticPaths() {
     const { items } = await contentfulClient.getEntries<Noticia>({
