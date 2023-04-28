@@ -5,9 +5,18 @@ export interface Noticia {
   imagenPortada: any;
   fecha: any;
   titulo: string;
+  titulo_ca: string;
+  titulo_en: string;
+  titulo_de: string;
   descripcion: string;
+  descripcion_ca: string;
+  descripcion_en: string;
+  descripcion_de: string;
   url: string;
-  contenido: Document
+  contenido: Document;
+  contenido_ca: Document;
+  contenido_en: Document;
+  contenido_de: Document;
 }
 
 export const contentfulClient = contentful.createClient({
