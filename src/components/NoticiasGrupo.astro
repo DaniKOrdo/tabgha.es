@@ -1,12 +1,9 @@
 ---
 const { imagen, fecha, titulo, descripcion, url } = Astro.props;
-
-const {pathname} = Astro.url;
-const urlNoticia = `${pathname}/noticias/${url}/`;
 ---
 
 <div class="w-full px-4 md:w-1/2 lg:w-1/3">
-    <a class="mx-auto mb-10 max-w-[370px]" href={urlNoticia}>
+    <a class="mx-auto mb-10 max-w-[370px]" href={url}>
         <div class="mb-8 overflow-hidden rounded">
             <img
             src={ imagen }
