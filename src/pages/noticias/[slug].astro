@@ -30,32 +30,15 @@ export async function getStaticPaths() {
     const pages = items.map((item) => {
         let tituloField = "titulo";
         let contenidoField = "contenido";
-        switch (i18next.language) {
-            case "es":
-                tituloField = "titulo";
-                contenidoField = "contenido";
-                break;
-            case "de":
-                tituloField = "titulo_de";
-                contenidoField = "contenido_de";
-                break;
-            case "ca":
-                tituloField = "titulo_ca";
-                contenidoField = "contenido_ca";
-                break;
-            case "en":
-                tituloField = "titulo_en";
-                contenidoField = "contenido_en";
-                break;
-            default:
-                break;
-        }
+        const contenido = documentToHtmlString(item.fields[contenidoField], options);
+        const titulo = item.fields[tituloField];
+        const fecha = new Date(item.fields.fecha).toLocaleDateString();
         return {
             params: { slug: item.fields.url },
             props: {
-                titulo: item.fields[tituloField],
-                contenido: documentToHtmlString(item.fields[contenidoField], options),
-                fecha: new Date(item.fields.fecha).toLocaleDateString(),
+                titulo,
+                contenido,
+                fecha,
             },
         };
     });
