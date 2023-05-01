@@ -6,12 +6,36 @@ import NoticiasGrupo from "./NoticiasGrupo.astro";
 import { contentfulClient } from "../lib/contentful";
 import type { Noticia } from "../lib/contentful";
 
+const {pathname} = Astro.url
+
+console.log(pathname)
+
+let tituloField = "titulo";
+let descripcionField = "descripcion";
+
+switch (pathname) {
+  case "/de":
+    tituloField = "titulo_de";
+    descripcionField = "descripcion_de";
+    break;
+  case "/ca":
+    tituloField = "titulo_ca";
+    descripcionField = "descripcion_ca";
+    break;
+  case "/en":
+    tituloField = "titulo_en";
+    descripcionField = "descripcion_en";
+    break;
+}
+
 const entries = await contentfulClient.getEntries<Noticia>({
   content_type: "noticias",
 });
 
 const posts = entries.items.map((item) => {
-  const { imagenPortada, fecha, titulo, descripcion, url  } = item.fields;
+  const { imagenPortada, fecha, url } = item.fields;
+  const titulo = item.fields[tituloField];
+  const descripcion = item.fields[descripcionField];
   return {
     imagenPortada,
     fecha: new Date(fecha).toLocaleDateString(),
@@ -41,15 +65,17 @@ const posts = entries.items.map((item) => {
         </div>
       </div>
       <div class="-mx-4 flex flex-wrap">
-        {posts.map((post) => (
-          <NoticiasGrupo
-            imagen={post.imagenPortada.fields.file.url}
-            fecha={post.fecha}
-            titulo={post.titulo}
-            descripcion={post.descripcion}
-            url={post.url}
-          />
-          ))}
+        {
+          posts.map((post) => (
+            <NoticiasGrupo
+              imagen={post.imagenPortada.fields.file.url}
+              fecha={post.fecha}
+              titulo={post.titulo}
+              descripcion={post.descripcion}
+              url={post.url}
+            />
+          ))
+        }
         <!-- {
           <NoticiasGrupo
             imagen={entries.items[0].fields.imagen.fields.file.url}
