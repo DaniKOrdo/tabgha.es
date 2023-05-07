@@ -1,0 +1,26 @@
+---
+import { t, changeLanguage } from "i18next";
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import Footer from "../../components/Footer.astro";
+import TitleSection from "../../components/widgets/TitleSection.astro";
+
+changeLanguage("ca");
+---
+
+<Layout title={t("seo.titulo.cartaBebidas")}>
+  <header>
+    <Navbar />
+  </header>
+  <main class="flex justify-center sm:py-40 py-24 px-4">
+    <div class="max-w-screen-xl">
+      <TitleSection title={t("titulos.bebida")} customClass="p-6" />
+      <picture>
+        <source srcset="/img/carta-bebidas-tabgha.webp" type="image/webp">
+        <img src="/img/carta-bebidas-tabgha.jpg" alt={t("titulos.bebida")}>
+        <!-- <img src="/img/Tabgha-Panes-y-Peces.jpg" alt="Tabgha Panes y Peces" class="mb-6 max-h-80 w-full m-auto object-cover rounded-md"> -->
+      </picture>
+    </div>
+  </main>
+  <Footer />
+</Layout>
