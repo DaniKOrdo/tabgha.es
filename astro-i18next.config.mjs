@@ -5,6 +5,7 @@ export default {
     routes: {
       ca: {
         "carta": "menu",
+        "carta-bebidas": "menu-drinks",
         "sentido": "sense",
         "noticias": "news",
         "ubicacion": "ubication",
@@ -12,6 +13,7 @@ export default {
       },
       en: {
         "carta": "menu",
+        "carta-bebidas": "menu-drinks",
         "sentido": "sense",
         "noticias": "news",
         "ubicacion": "ubication",
@@ -19,6 +21,7 @@ export default {
       },
       de: {
         "carta": "menu",
+        "carta-bebidas": "menu-drinks",
         "sentido": "sense",
         "noticias": "news",
         "ubicacion": "ubication",
