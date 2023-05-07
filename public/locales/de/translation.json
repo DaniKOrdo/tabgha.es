@@ -5,6 +5,12 @@
     "descripcion": "Strandbar von Portals Nous, Mallorca. Mit mediterraner Küche und einer entspannten und familiären Atmosphäre.",
     "keywords": "tabgha, strandbar, chiringuito, portals nous, strand"
   },
+  "seo": {
+    "titulo": {
+      "carta": "Tabgha | Unser Menü",
+      "cartaBebidas": "Tabgha | Getränkekarte"
+    }
+  },
   "navegacion": {
     "inicio": "home",
     "sentido": "de/noticias/francisco-panes-y-los-peces",
@@ -14,7 +20,7 @@
     "ubicacion": "location",
     "contacto": "contact",
     "comida": "food",
-    "bebidas": "drinks"
+    "bebidas": "menu-drinks"
   },
   "navbar": {
     "inicio": "home",
@@ -28,6 +34,7 @@
   "titulos": {
     "sentido": "SINN",
     "carta": "UNSERS MENÜ",
+    "bebidas": "GETRÄNKE",
     "colabora": "ZUSAMMENARBEITEN",
     "noticias": "NACHRICHTEN",
     "ubicacion": "ORT"

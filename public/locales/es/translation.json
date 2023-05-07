@@ -5,6 +5,12 @@
     "descripcion": "Chiringuito en la playa de Portals Nous, Mallorca. Con una cocina mediterránea y un ambiente relajado y familiar.",
     "keywords": "tabgha, chiringuito, portals nous, playa"
   },
+  "seo": {
+    "titulo": {
+      "carta": "Tabgha | Nuestra Carta",
+      "cartaBebidas": "Tabgha | Nuestra Carta Bebidas"
+    }
+  },
   "navegacion": {
     "inicio": "inicio",
     "sentido": "noticias/francisco-panes-y-los-peces",
@@ -14,7 +20,7 @@
     "ubicacion": "ubicación",
     "contacto": "contacto",
     "comida": "comida",
-    "bebidas": "bebidas"
+    "bebidas": "carta-bebidas"
   },
   "navbar": {
     "inicio": "inicio",
@@ -28,6 +34,7 @@
   "titulos": {
     "sentido": "SENTIDO",
     "carta": "NUESTRA CARTA",
+    "bebidas": "BEBIDAS",
     "colabora": "COLABORA",
     "noticias": "NOTICIAS",
     "ubicacion": "UBICACIÓN"

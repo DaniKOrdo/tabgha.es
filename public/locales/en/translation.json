@@ -5,6 +5,12 @@
     "descripcion": "Beach bar on the beach of Portals Nous, Majorca. With Mediterranean cuisine and a relaxed and familiar atmosphere.",
     "keywords": "tabgha, beach bar, portals nous, beach"
   },
+  "seo": {
+    "titulo": {
+      "carta": "Tabgha | Our Menu",
+      "cartaBebidas": "Tabgha | Our Drink Menu"
+    }
+  },
   "navegacion": {
     "inicio": "home",
     "sentido": "en/noticias/francisco-panes-y-los-peces",
@@ -14,7 +20,7 @@
     "ubicacion": "location",
     "contacto": "contact",
     "comida": "food",
-    "bebidas": "drinks"
+    "bebidas": "menu-drinks"
   },
   "navbar": {
     "inicio": "home",
@@ -28,6 +34,7 @@
   "titulos": {
     "sentido": "SENSE",
     "carta": "OUR MENU",
+    "bebidas": "DRINKS",
     "colabora": "COLLABORATE",
     "noticias": "NEWS",
     "ubicacion": "LOCATION"
