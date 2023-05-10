@@ -1,9 +1,11 @@
 ---
 import { t, changeLanguage } from "i18next";
+import { localizePath } from "astro-i18next";
 import Layout from "../../layouts/Layout.astro";
 import Navbar from "../../components/Navbar.astro";
 import Footer from "../../components/Footer.astro";
 import TitleSection from "../../components/widgets/TitleSection.astro";
+import RestaurantSVG from "../../components/icons/Restaurant.astro";
 
 changeLanguage("en");
 ---
@@ -12,14 +14,18 @@ changeLanguage("en");
   <header>
     <Navbar />
   </header>
-  <main class="flex justify-center sm:py-40 py-24 px-4">
-    <div class="max-w-screen-xl">
+  <main class="flex justify-center sm:py-40 py-16">
+    <div class="max-w-screen-xl flex flex-col justify-center items-center">
       <TitleSection title={t("titulos.bebidas")} customClass="p-6" />
       <picture>
-        <source srcset="/img/carta-bebidas-tabgha.webp" type="image/webp">
-        <img src="/img/carta-bebidas-tabgha.jpg" alt={t("titulos.bebidas")}>
+        <!-- <source srcset="/img/carta/carta-bebidas-tabgha-en.webp" type="image/webp"> -->
+        <img src="/img/carta/carta-bebidas-tabgha-en.jpg" alt={t("titulos.bebidas")}>
         <!-- <img src="/img/Tabgha-Panes-y-Peces.jpg" alt="Tabgha Panes y Peces" class="mb-6 max-h-80 w-full m-auto object-cover rounded-md"> -->
       </picture>
+      <a href={localizePath(t("navegacion.carta"))}
+        class="flex items-center justify-center gap-2 w-3/4 sm:w-1/4 rounded px-12 py-3 text-sm font-medium text-white shadow bg-tg-two mt-8">
+        <RestaurantSVG />{t("botones.comida")}
+      </a>
     </div>
   </main>
   <Footer />
