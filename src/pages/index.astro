@@ -4,6 +4,7 @@ import { Trans, HeadHrefLangs } from "astro-i18next/components";
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import Hero from "../components/Hero.astro";
+import Carousel from "../components/Carousel.astro";
 import Footer from "../components/Footer.astro";
 import Sentido from "../components/Sentido.astro";
 import NuestraCarta from "../components/NuestraCarta.astro";
@@ -14,12 +15,13 @@ import Colabora from "../components/Colabora.astro";
 changeLanguage("es");
 ---
 
-<Layout title="Tabgha">
+<Layout title="Tabgha | Chiringuito Solidario Portals Nous">
 	<header>
 		<Navbar />
 	</header>
 	<main class="mb-36">
 		<Hero />
+		<!-- <Carousel /> -->
 		<Sentido />
 		<NuestraCarta />
 		<Colabora />
