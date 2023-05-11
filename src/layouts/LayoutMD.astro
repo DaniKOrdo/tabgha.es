@@ -1,0 +1,188 @@
+---
+import "@fontsource/montserrat";
+import "@fontsource/manrope";
+
+import i18next, { t } from "i18next";
+import { HeadHrefLangs } from "astro-i18next/components";
+import Metatags from "../components/Metatags.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import TitleSection from "../components/widgets/TitleSection.astro";
+
+const { frontmatter } = Astro.props
+---
+
+<!DOCTYPE html>
+<html lang={i18next.language}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <HeadHrefLangs />
+    <title>{ frontmatter.title }</title>
+    <Metatags />
+    <link rel="sitemap" href="/sitemap-index.xml">
+  </head>
+  <body>
+    <header>
+      <Navbar />
+    </header>
+    <main class="flex justify-center sm:py-40 py-16">
+      <div class="max-w-screen-xl flex flex-col p-6">
+        <TitleSection title={ frontmatter.titleSection } customClass="p-6" />
+        <article>
+          <slot />
+        </article>
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style is:inline>
+	html {
+		font-family: "Montserrat", system-ui, sans-serif;
+		background-color: #f7f6ef;
+		scroll-behavior: smooth;
+	}
+
+	.shadow-tb {
+		text-shadow: black 0.1em 0.1em 0.2em;
+	}
+
+  ::-moz-selection { /* Code for Firefox */
+    color: #e6be8f;
+    background: #254B5E;
+  }
+
+  ::selection {
+    color: #e6be8f;
+    background: #254B5E;
+  }
+
+    /* Headings */
+    article h1 {
+    margin-bottom: 1rem;
+    font-size: 1.875rem;
+    font-weight: 800;
+    line-height: 1.25;
+    color: #1a202c;
+  }
+  @media (min-width: 1024px) {
+    article h1 {
+      margin-bottom: 1.5rem;
+      font-size: 2.25rem;
+    }
+  }
+  article h2 {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.25;
+    color: #1a202c;
+  }
+  @media (min-width: 1024px) {
+    article h2 {
+      margin-top: 3.5rem;
+      margin-bottom: 1.5rem;
+      font-size: 1.875rem;
+    }
+  }
+  article h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.25;
+    color: #1a202c;
+  }
+  @media (min-width: 1024px) {
+    article h3 {
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+  }
+  article h4 {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.25;
+    color: #1a202c;
+  }
+  @media (min-width: 1024px) {
+    article h4 {
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      font-size: 1.25rem;
+    }
+  }
+
+  /* Images */
+
+  article img {
+    margin-bottom: 1.25rem;
+  }
+
+  /* Paragraphs */
+  article p {
+    margin-bottom: 1.25rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #4a5568;
+  }
+  @media (min-width: 1024px) {
+    article p {
+      margin-bottom: 1.5rem;
+      font-size: 1.125rem;
+    }
+  }
+
+  /* List items */
+  article ul,
+  article ol {
+    list-style-type: disc;
+    padding-left: 1.5em;
+    margin-bottom: 1.25rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #4a5568;
+  }
+  @media (min-width: 1024px) {
+    article ul,
+    article ol {
+      margin-bottom: 1.5rem;
+      font-size: 1.125rem;
+    }
+  }
+
+  /* Links */
+  article a {
+    color: #3182ce;
+    text-decoration: none;
+    border-bottom: 1px solid #3182ce;
+  }
+  article a:hover {
+    color: #2c5282;
+    border-color: #2c5282;
+  }
+
+  /* Blockquotes */
+  article blockquote {
+    margin: 0 0 1.25rem;
+    padding-left: 1rem;
+    border-left: 0.25rem solid #e2e8f0;
+    font-size: 1.125rem;
+    line-height: 1.5;
+    color: #4a5568;
+  }
+  @media (min-width: 1024px) {
+    article blockquote {
+      margin-bottom: 1.5rem;
+      font-size: 1.25rem;
+    }
+  }
+</style>
