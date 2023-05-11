@@ -29,7 +29,10 @@
     "noticias": "news",
     "colabora": "collaborate",
     "ubicacion": "location",
-    "contacto": "contact"
+    "contacto": "contact",
+    "avisoLegal": "Legal Notice",
+    "privacidad": "Privacy policy",
+    "cookies": "Cookie policy"
   },
   "titulos": {
     "sentido": "SENSE",

@@ -29,7 +29,10 @@
     "noticias": "noticias",
     "colabora": "colabora",
     "ubicacion": "ubicación",
-    "contacto": "contacto"
+    "contacto": "contacto",
+    "avisoLegal": "Aviso legal",
+    "privacidad": "Política de privacidad",
+    "cookies": "Política de cookies"
   },
   "titulos": {
     "sentido": "SENTIDO",

@@ -29,7 +29,10 @@
     "noticias": "nachrichten",
     "colabora": "zusammenarbeiten",
     "ubicacion": "standort",
-    "contacto": "kontakt"
+    "contacto": "kontakt",
+    "avisoLegal": "Rechtliche Hinweise",
+    "privacidad": "Datenschutz",
+    "cookies": "Cookie-Politik"
   },
   "titulos": {
     "sentido": "SINN",
