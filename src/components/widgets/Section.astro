@@ -11,6 +11,7 @@ const {
   maps,
   imgWidth,
   imgHeight,
+  fontText = "text-3xl",
 } = Astro.props;
 ---
 
@@ -21,7 +22,7 @@ const {
     <div
       class="flex flex-col items-center sm:text-left p-6 lg:w-1/2 h-full"
     >
-      <TitleSection title={title} />
+      <TitleSection title={title} fontText={fontText} />
       <p class="mt-4 max-w-lg sm:text-xl whitespace-pre-wrap">{text}</p>
       <slot />
     </div>

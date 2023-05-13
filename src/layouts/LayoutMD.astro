@@ -31,7 +31,7 @@ const { frontmatter } = Astro.props
     <main class="flex justify-center sm:py-40 py-16">
       <div class="max-w-screen-xl flex flex-col p-6">
         <TitleSection title={ frontmatter.titleSection } customClass="p-6" />
-        <article>
+        <article class="relative">
           <slot />
         </article>
       </div>
@@ -158,12 +158,16 @@ const { frontmatter } = Astro.props
       font-size: 1.125rem;
     }
   }
-
   /* Links */
   article a {
     color: #3182ce;
     text-decoration: none;
     border-bottom: 1px solid #3182ce;
+    display: inline-block;
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
   article a:hover {
     color: #2c5282;
