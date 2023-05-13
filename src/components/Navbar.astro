@@ -4,6 +4,8 @@ import { localizePath } from "astro-i18next";
 import  LanguageSelectorLOCAL  from "./LanguageSelector.astro";
 import  {LanguageSelector}  from "astro-i18next/components";
 import Flags from "./widgets/Flags.astro";
+import TabghaLogo from "./widgets/TabghaLogo.astro";
+
 
 const { pathname } = Astro.url;
 
@@ -37,7 +39,8 @@ if (validPathnames.includes(pathname)) {
 <nav class="absolute w-full z-10 bg-[#f7f6ef] bg-opacity-100 border-gray-200 px-2 sm:px-4 py-2.5">
     <div class="container flex flex-wrap items-center justify-between mx-auto">
         <a href={homePath} class="flex items-center">
-            <img src="/img/tabgha-logo.svg" class="h-9 mr-3 ml-3 sm:h-9" alt="Tabgha Logo" />
+            <TabghaLogo className="h-9 mr-3 ml-3 sm:h-9"/>
+            <!-- <img src="/img/tabgha-logo.svg" class="h-9 mr-3 ml-3 sm:h-9" alt="Tabgha Logo" /> -->
             <span class="self-center text-xl font-semibold whitespace-nowrap md:hidden xl:block logoName">TABGHA</span>
         </a>
         <div class="bg-gray-300 p-1 rounded-full cursor-pointer flex items-center pl-3">
