@@ -9,6 +9,8 @@ const {
   img,
   alt,
   maps,
+  imgWidth,
+  imgHeight,
 } = Astro.props;
 ---
 
@@ -37,7 +39,7 @@ const {
         </div>
       ) : (
         <div class="p-6 flex justify-center lg:w-1/2">
-          <img loading="lazy" class="max-h-80 rounded-md" src={img} alt={alt} />
+          <img loading="lazy" class="max-h-80 rounded-md" src={img} alt={alt} width={imgWidth} height={imgHeight} />
         </div>
       )
     }
