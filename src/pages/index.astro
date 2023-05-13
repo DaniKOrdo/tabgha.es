@@ -11,6 +11,7 @@ import NuestraCarta from "../components/NuestraCarta.astro";
 import Noticias from "../components/Noticias.astro";
 import Ubicacion from "../components/Ubicacion.astro";
 import Colabora from "../components/Colabora.astro";
+import CookiesBanner from "../components/widgets/CookiesBanner.astro";
 
 changeLanguage("es");
 ---
@@ -21,6 +22,7 @@ changeLanguage("es");
 	</header>
 	<main class="mb-36">
 		<Hero />
+		<CookiesBanner />
 		<!-- <Carousel /> -->
 		<Sentido />
 		<NuestraCarta />
