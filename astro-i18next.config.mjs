@@ -9,8 +9,7 @@ export default {
         "sentido": "sense",
         "noticias": "news",
         "ubicacion": "ubication",
-        "contacto": "contact",
-        "politica-de-privacidad": "privacity-policy"
+        "contacto": "contact"
       },
       en: {
         "carta": "menu",
@@ -18,8 +17,7 @@ export default {
         "sentido": "sense",
         "noticias": "news",
         "ubicacion": "ubication",
-        "contacto": "contact",
-        "politica-de-privacidad": "privacity-policy"
+        "contacto": "contact"
       },
       de: {
         "carta": "menu",
@@ -27,8 +25,7 @@ export default {
         "sentido": "sense",
         "noticias": "news",
         "ubicacion": "ubication",
-        "contacto": "contact",
-        "politica-de-privacidad": "privacity-policy"
+        "contacto": "contact"
       }
     }
   };
