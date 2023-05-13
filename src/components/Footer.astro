@@ -1,67 +1,88 @@
 ---
 import i18next, { t } from "i18next";
-import { localizePath } from "astro-i18next";
 
-const isCurrentPath = (path) => {
-  const { pathname } = Astro.url;
-  const currentNormalizedPath = pathname.replace(/\/$/, "");
-  path = path.replace(/\/$/, "");
-  return currentNormalizedPath === path;
-};
+function politicaDePrivacidad(idiom:String) {
+  switch (idiom) {
+    case "es":
+      return "/legal/politica-de-privacidad/";
+    case "en":
+      return "/en/legal/politica-de-privacidad/";
+    case "de":
+      return "/de/legal/politica-de-privacidad/";
+    case "ca":
+      return "/ca/legal/politica-de-privacidad/";
+  }
+}
 
-const { pathname } = Astro.url;
+function avisoLegal(idiom:String) {
+  switch (idiom) {
+    case "es":
+      return "/legal/aviso-legal/";
+    case "en":
+      return "/en/legal/aviso-legal/";
+    case "de":
+      return "/de/legal/aviso-legal/";
+    case "ca":
+      return "/ca/legal/aviso-legal/";
+  }
+}
 
-const navigationItems = {
-  "/": t("navbar.inicio"),
-  "/sentido/": t("navbar.sentido"),
-  "/carta/": t("navbar.carta"),
-  "/noticias/": t("navbar.noticias"),
-  "/ubicacion/": t("navbar.ubicacion"),
-  "/contacto/": t("navbar.contacto"),
-};
+function cookies(idiom:String) {
+  switch (idiom) {
+    case "es":
+      return "/legal/politica-de-cookies/";
+    case "en":
+      return "/en/legal/politica-de-cookies/";
+    case "de":
+      return "/de/legal/politica-de-cookies/";
+    case "ca":
+      return "/ca/legal/politica-de-cookies/";
+  }
+}
+
+function creadoPor(idiom:String) {
+  switch (idiom) {
+    case "es":
+      return "Creado con ♥️ por ";
+    case "en":
+      return "Created with ♥️ by ";
+    case "de":
+      return "Erstellt mit ♥️ von ";
+    case "ca":
+      return "Creat amb ♥️ per ";
+  }
+}
+
+
 ---
 
 <footer
-  class="bottom-0 w-full p-4 bg-tb-postHeader bg-opacity-80 rounded-t-lg shadow md:flex md:items-center md:justify-between md:p-6"
+  class="bottom-0 w-full p-4 bg-tb-postHeader bg-opacity-80 shadow md:flex md:items-center md:justify-between md:p-6"
 >
-  <span class="text-sm text-white sm:text-cente">© 2023 TABGHA</span>
-  <ul class="flex flex-wrap items-center mt-3 text-sm text-white sm:mt-0">
-    {
-      Object.keys(navigationItems).map((key) => {
-        let className = "mr-4 hover:underline md:mr-6 uppercase";
-        if (isCurrentPath(localizePath(key, i18next.language))) {
-          className += " font-semibold";
-        } else {
-          className +=
-            " opacity-75 hover:opacity-100 hover:underline decoration-gray-300";
-        }
-
-        if (
-          pathname === "/" ||
-          pathname === "/ca" ||
-          pathname === "/en" ||
-          pathname === "/de"
-        ) {
-          return (
-            <li>
-              <a class={className} href={`#${navigationItems[key]}`}>
-                {navigationItems[key]}
-              </a>
-            </li>
-          );
-        } else {
-          return (
-            <li>
-              <a
-                class={className}
-                href={`${localizePath("/", i18next.language)}#${navigationItems[key]}`}
-              >
-                {navigationItems[key]}
-              </a>
-            </li>
-          );
-        }
-      })
-    }
+  <span class="flex justify-center text-sm text-white">{creadoPor(i18next.language)}<a class="linkToCreator" href="https://danik.dev/" target="_blank"> danik.dev</a></span>
+  <ul class="flex flex-col sm:flex-row items-center mt-3 text-sm text-gray-300 sm:mt-0">
+    <li>
+      <a class="block px-2 py-1 mx-2" href={politicaDePrivacidad(i18next.language)}>
+        {t("navbar.privacidad")}
+      </a>
+    </li>
+    <li>
+      <a class="block px-2 py-1 mx-2" href={avisoLegal(i18next.language)}>
+        {t("navbar.avisoLegal")}
+      </a>
+    </li>
+    <li>
+      <a class="block px-2 py-1 mx-2" href={cookies(i18next.language)}>
+        {t("navbar.cookies")}
+      </a>
+    </li>
   </ul>
 </footer>
+
+<style is:inline>
+  .linkToCreator{
+    color: #d5ecff;
+    text-decoration: underline;
+    margin-left: 5px;
+  }
+</style>
