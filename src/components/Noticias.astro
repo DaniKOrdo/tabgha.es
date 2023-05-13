@@ -68,6 +68,13 @@ const posts = entries.items.map((item) => {
         </div>
       </div>
       <div class="-mx-4 flex flex-wrap">
+        <NoticiasGrupo
+        imagen="../../public/img/manos-unidas.jpg"
+        fecha="11/05/2023"
+        titulo={t("noticias.frases.titulo")}
+        descripcion={t("noticias.frases.descripcion")}
+        url={t("noticias.frases.url")}
+      />
         {
           posts.map((post) => (
             <NoticiasGrupo
@@ -86,16 +93,6 @@ const posts = entries.items.map((item) => {
             titulo={entries.items[0].fields.titulo}
             descripcion={entries.items[0].fields.descripcion}
           />
-        } -->
-        <!-- {
-          entries.items.map((item) => (
-              <NoticiasGrupo
-                imagen={item.fields.imagen.fields.file.url}
-                fecha={item.fields.fecha}
-                titulo={item.fields.titulo}
-                descripcion={item.fields.descripcion}
-              />
-          ))
         } -->
       </div>
     </div>
