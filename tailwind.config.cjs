@@ -12,7 +12,8 @@ module.exports = {
 				'tg-two': '#49537E',
 				'tg-three': '#254B5E',
 				'tg-four': '#3B8686',
-				'tg-sand': '#e6be8f',
+				'tg-sand': '#fcd09b',
+				'tg-sand2': '#f1b977',
 				'tg-navbar': '#fdf7e1',
 				'tb-postHeader': '#1e2b61'
 			},
