@@ -69,12 +69,21 @@ const posts = entries.items.map((item) => {
       </div>
       <div class="-mx-4 flex flex-wrap md:gap-0 gap-20">
         <NoticiasGrupo
-        imagen="/img/manos-unidas.jpg"
-        fecha="11/05/2023"
-        titulo={t("noticias.frases.titulo")}
-        descripcion={t("noticias.frases.descripcion")}
-        url={t("noticias.frases.url")}
-      />
+          imagen="/img/mural-tabgha.jpg"
+          alt="Mural Tabgha"
+          fecha="11/5/2023"
+          titulo={t("noticias.muralista.titulo")}
+          descripcion={t("noticias.muralista.descripcion")}
+          url={t("noticias.muralista.url")}
+        />
+        <NoticiasGrupo
+          imagen="/img/manos-unidas.jpg"
+          alt="Manos Unidas"
+          fecha="5/5/2023"
+          titulo={t("noticias.frases.titulo")}
+          descripcion={t("noticias.frases.descripcion")}
+          url={t("noticias.frases.url")}
+        />
         {
           posts.map((post) => (
             <NoticiasGrupo

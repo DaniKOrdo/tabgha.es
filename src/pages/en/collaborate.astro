@@ -1,0 +1,41 @@
+---
+import i18next, { t, changeLanguage } from "i18next";
+import { Trans } from "astro-i18next/components";
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import Footer from "../../components/Footer.astro";
+import TitleSection from "../../components/widgets/TitleSection.astro";
+
+changeLanguage("en");
+---
+
+<Layout title="Tabgha | Collaborate with our project">
+  <header>
+    <Navbar />
+  </header>
+  <main class="flex justify-center sm:py-40 py-24 px-5 min-h-[95vh]">
+    <div
+      class="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue"
+    >
+    <TitleSection title="COLLABORATE" />
+     <article>
+          <h2>A.- With our project of the ALBERGUE FAMILIAR Cáritas Interparroquial in the parish of Palmanova. We explain:</h2>
+          <p>You can collaborate with our project with a donation to the Bizum of the ALBERGUE FAMILIAR num ______ or to the account ES370049488393912116065675 (specify family shelter).</p>
+
+          <h2>B.- With the Cáritas Inca soup kitchen. We explain it to you:</h2>
+          <p>You can collaborate with our project with a donation to the Bizum of the COMEDOR SOCIAL NUM _______ or to the account ES370049488393912116065675 (specify comedor social)</p>
+          <div class="flex aspect-video skeleton">
+              <iframe width="100%" height="100%" src="https://www.youtube.com/embed/0QvX58cEGgE" title="Cáritas Inca" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+
+          <h2>C.- To cover the BASIC NEEDS that put any person at risk of exclusion. We explain it to you:</h2>
+          <p>You can collaborate with our project with a donation to the Bizum of NECESIDADES BASCIAS NUM _______ or to the account ES370049488393912116065675 (specify basic needs).</p>
+          <div class="flex aspect-video skeleton">
+              <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ZwMbJM3NdlY" title="Cáritas Santander" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+     </article>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
