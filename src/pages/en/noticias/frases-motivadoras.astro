@@ -1,0 +1,165 @@
+---
+import i18next, { t, changeLanguage } from "i18next";
+import Layout from "../../../layouts/Layout.astro";
+import Navbar from "../../../components/Navbar.astro";
+import Footer from "../../../components/Footer.astro";
+
+changeLanguage("en");
+---
+
+<Layout title="Tabgha | Motivational phrases for the common good">
+  <header>
+    <Navbar />
+  </header>
+  <main class="flex justify-center sm:py-40 py-24 px-5 min-h-[95vh]">
+    <article
+      class="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue"
+    >
+      <h1>Motivational phrases for the common good</h1>
+      <img src="../../public/img/manos-unidas.jpg" alt="manos unidas" width="1279px" height="656px">
+      <p><strong>LEAVE AND SHARE.</strong> We invite you to share a phrase of your own or of an author with whom you identify or with whom you
+        you think it can illuminate and/or give clues to lead us, society, towards the common good. Possible themes:
+        poverty and exclusion, work, economy, new technologies, spirituality, religion, communication, interpersonal
+        interpersonal communication, politics, self-help, education, sport, meaning, God...</p>
+      <p>Fill in the form below or 
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSeAuZXrMlf9Jh4pA_HN_EpCJgAFSaxpx0eiG5OTg3dOGHw5RQ/viewform" target="_blank">click on this link.</a>
+      </p>
+
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeAuZXrMlf9Jh4pA_HN_EpCJgAFSaxpx0eiG5OTg3dOGHw5RQ/viewform?embedded=true"
+          width="100%"
+          height="1100px"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0">Loading…</iframe>
+    </article>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style is:inline>
+  /* Headings */
+  article h1 {
+    margin-bottom: 1rem;
+    font-size: 1.875rem;
+    font-weight: 800;
+    line-height: 1.25;
+    color: #1a202c;
+  }
+  @media (min-width: 1024px) {
+    article h1 {
+      margin-bottom: 1.5rem;
+      font-size: 2.25rem;
+    }
+  }
+  article h2 {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.25;
+    color: #1a202c;
+  }
+  @media (min-width: 1024px) {
+    article h2 {
+      margin-top: 3.5rem;
+      margin-bottom: 1.5rem;
+      font-size: 1.875rem;
+    }
+  }
+  article h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.25;
+    color: #1a202c;
+  }
+  @media (min-width: 1024px) {
+    article h3 {
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+  }
+  article h4 {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.25;
+    color: #1a202c;
+  }
+  @media (min-width: 1024px) {
+    article h4 {
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      font-size: 1.25rem;
+    }
+  }
+
+  /* Images */
+
+  article img {
+    margin-bottom: 1.25rem;
+  }
+
+  /* Paragraphs */
+  article p {
+    margin-bottom: 1.25rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #4a5568;
+  }
+  @media (min-width: 1024px) {
+    article p {
+      margin-bottom: 1.5rem;
+      font-size: 1.125rem;
+    }
+  }
+
+  /* List items */
+  article ul,
+  article ol {
+    list-style-type: disc;
+    padding-left: 1.5em;
+    margin-bottom: 1.25rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #4a5568;
+  }
+  @media (min-width: 1024px) {
+    article ul,
+    article ol {
+      margin-bottom: 1.5rem;
+      font-size: 1.125rem;
+    }
+  }
+
+  /* Links */
+  article a {
+    color: #3182ce;
+    text-decoration: none;
+    border-bottom: 1px solid #3182ce;
+  }
+  article a:hover {
+    color: #2c5282;
+    border-color: #2c5282;
+  }
+
+  /* Blockquotes */
+  article blockquote {
+    margin: 0 0 1.25rem;
+    padding-left: 1rem;
+    border-left: 0.25rem solid #e2e8f0;
+    font-size: 1.125rem;
+    line-height: 1.5;
+    color: #4a5568;
+  }
+  @media (min-width: 1024px) {
+    article blockquote {
+      margin-bottom: 1.5rem;
+      font-size: 1.25rem;
+    }
+  }
+</style>
