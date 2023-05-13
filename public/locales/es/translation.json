@@ -1,7 +1,8 @@
 {
   "site": {
-    "inicio": "Tabgha | Chiringuito Playa Portals Nous",
+    "inicio": "Tabgha | Chiringuito Solidario Portals Nous",
     "sentido": "Tabgha | Sentido",
+    "colabora": "Tabgha | Colabora con nosotros",
     "descripcion": "Chiringuito en la playa de Portals Nous, Mallorca. Con una cocina mediterránea y un ambiente relajado y familiar.",
     "keywords": "tabgha, chiringuito, portals nous, playa"
   },
@@ -56,7 +57,8 @@
     "boton": "Volver a la página de inicio"
   },
   "portada": {
-    "descripcion": "Chiringuito en la playa de Portals Nous, Mallorca. Con una cocina mediterránea y un ambiente relajado y familiar."
+    "chiringuitoSolidario": "Chiringuito Solidario",
+    "descripcion": "Chiringuito Solidario en la playa de Portals Nous, Mallorca. Con una cocina mediterránea y un ambiente relajado y familiar."
   },
   "textos": {
     "sentido": "Encarnados en el mundo, queremos agradecer todo lo recibido; queremos partir y compartir las ganancias de este “chiringuito” con los más necesitados, en especial con aquellos que están pasando dificultad y necesitan un lugar donde vivir, les queremos dar una mano: vamos a adecuar un espacio en la Parroquia de Palmanova para ser destinado a albergue familiar.",
@@ -73,6 +75,11 @@
       "titulo": "Frases motivadoras para el bien común",
       "descripcion": "Te invitamos a compartir una frase propia o de algún autor con el cual te identifiques o creas que pueda iluminar y/o dar pistas para conducirnos, a la sociedad, hacia el bien común",
       "url": "/noticias/frases-motivadoras"
+    },
+    "muralista": {
+      "titulo": "Os presentamos a la artista del mural, Carolina",
+      "descripcion": "Carolina nos ha enviado un video desde su taller, en el cual explica en profundidad su experiencia colaborando con nuestro proyecto a través de la creación de este magnífico mural.",
+      "url": "/noticias/artista-mural-carolina"
     }
   },
   "cookies": {

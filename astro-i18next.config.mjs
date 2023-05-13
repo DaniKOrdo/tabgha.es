@@ -7,6 +7,7 @@ export default {
         "carta": "menu",
         "carta-bebidas": "menu-drinks",
         "sentido": "sense",
+        "colabora": "collaborate",
         "noticias": "news",
         "ubicacion": "ubication",
         "contacto": "contact"
@@ -15,6 +16,7 @@ export default {
         "carta": "menu",
         "carta-bebidas": "menu-drinks",
         "sentido": "sense",
+        "colabora": "collaborate",
         "noticias": "news",
         "ubicacion": "ubication",
         "contacto": "contact"
@@ -23,6 +25,7 @@ export default {
         "carta": "menu",
         "carta-bebidas": "menu-drinks",
         "sentido": "sense",
+        "colabora": "collaborate",
         "noticias": "news",
         "ubicacion": "ubication",
         "contacto": "contact"

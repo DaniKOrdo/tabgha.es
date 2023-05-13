@@ -1,7 +1,8 @@
 {
   "site": {
-    "inicio": "Tabgha | Portals Nous beach bar",
+    "inicio": "Tabgha | Portals Nous Solidarity Beach Bar",
     "sentido": "Tabgha | Sense",
+    "colabora": "Tabgha | Collaborate with us",
     "descripcion": "Beach bar on the beach of Portals Nous, Majorca. With Mediterranean cuisine and a relaxed and familiar atmosphere.",
     "keywords": "tabgha, beach bar, portals nous, beach"
   },
@@ -15,7 +16,7 @@
     "inicio": "home",
     "sentido": "en/noticias/papa-francisco-panes-y-los-peces",
     "carta": "menu",
-    "colabora": "collaborate",
+    "colabora": "en/collaborate",
     "noticias": "news",
     "ubicacion": "location",
     "contacto": "contact",
@@ -56,7 +57,8 @@
     "boton": "Back to homepage"
   },
   "portada": {
-    "descripcion": "Chiringuito on the beach of Portals Nous, Mallorca. With Mediterranean cuisine and a relaxed, family atmosphere."
+    "chiringuitoSolidario": "Solidarity Beach Bar",
+    "descripcion": "Solidarity Beach Bar on the beach of Portals Nous, Mallorca. With Mediterranean cuisine and a relaxed, family atmosphere."
   },
   "textos": {
     "sentido": "Incarnated in this world, we want to express our gratitude for everything we have received. We want to share the profits of this “venture” with those in need, especially with those who are facing difficulties and require a place to live. We want to lend a helping hand by adapting a space in the Parish of Palmanova to be used as a family shelter.",
@@ -73,6 +75,11 @@
       "titulo": "Motivational phrases for the common good",
       "descripcion": "We invite you to share a phrase of your own or of an author with whom you identify or with whom you you think it can illuminate and/or give clues to lead us, society, towards the common good",
       "url": "/en/noticias/frases-motivadoras"
+    },
+    "muralista": {
+      "titulo": "Introducing the artist of the mural, Carolina",
+      "descripcion": "Carolina has sent us a video from her workshop, in which she explains in depth her experience collaborating with our project through the creation of this magnificent mural.",
+      "url": "/en/noticias/artista-mural-carolina"
     }
   },
   "cookies": {

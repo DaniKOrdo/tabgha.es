@@ -18,14 +18,17 @@ import TabghaLogo from "./widgets/TabghaLogo.astro";
   <img src="/img/wave.svg" alt="ola playa" class="absolute inset-x-0 bottom-[-1px]">
 
   <div class="relative text-white mx-auto max-w-screen-xl md:py-32 py-5 px-6 sm:flex sm:flex-row-reverse xl:h-screen sm:items-center lg:px-8">
-    <div class="max-w-xl text-center justify-center sm:bg-opacity-60 bg-opacity-30 p-9 rounded-xl">
+    <div class="max-w-xl text-center justify-center sm:bg-opacity-60 bg-opacity-30 p-8 rounded-xl">
       <TabghaLogo className="md:p-16 p-8 m-auto tg-logo-size"/>
       <!-- <img src="/img/tabgha-logo.svg" alt="Tabgha Logo" class="md:p-16 p-8 m-auto tg-logo-size"> -->
         <h1 class="text-5xl font-bold shadow-tb">
           TABGHA
-            <span class="text-3xl font-tg-title block font-bold text-tg-sand shadow-tb">
-                Portals Nous
+            <span class="text-2xl font-tg-title block font-bold text-tg-sand shadow-tb">
+              {t("portada.chiringuitoSolidario")}
             </span>
+            <span class="text-2xl font-tg-title block font-bold text-tg-sand2 shadow-tb">
+              Portals Nous
+          </span>
         </h1>
 
         <p class="mt-4 max-w-lg sm:text-xl sm:leading-relaxed shadow-tb">
@@ -48,6 +51,9 @@ import TabghaLogo from "./widgets/TabghaLogo.astro";
 </section>
 
 <style is:inline>
+  .chiringuito {
+    color: #c6934b;
+  }
   @media (max-height: 900px) and (min-width: 640px) {
     .tg-logo-size {
       max-width: 80%;

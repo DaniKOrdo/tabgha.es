@@ -1,7 +1,8 @@
 {
   "site": {
-    "inicio": "Tabgha | Portals Nous Strandbar",
+    "inicio": "Tabgha | Solidarische Strandbar Portals Nous",
     "sentido": "Tabgha | Sinn",
+    "colabora": "Tabgha | Mit uns zusammenarbeiten",
     "descripcion": "Strandbar von Portals Nous, Mallorca. Mit mediterraner Küche und einer entspannten und familiären Atmosphäre.",
     "keywords": "tabgha, strandbar, chiringuito, portals nous, strand"
   },
@@ -15,7 +16,7 @@
     "inicio": "home",
     "sentido": "de/noticias/papa-francisco-panes-y-los-peces",
     "carta": "menu",
-    "colabora": "collaborate",
+    "colabora": "de/collaborate",
     "noticias": "news",
     "ubicacion": "location",
     "contacto": "contact",
@@ -56,7 +57,8 @@
     "boton": "Zurück zur Homepage"
   },
   "portada": {
-    "descripcion": "Chiringuito am Strand von Portals Nous, Mallorca. Mit mediterraner Küche und einer entspannten, familiären Atmosphäre."
+    "chiringuitoSolidario": "Solidarische Strandbar",
+    "descripcion": "Solidarische Strandbar am Strand von Portals Nous, Mallorca. Mit mediterraner Küche und einer entspannten, familiären Atmosphäre."
   },
   "textos": {
     "sentido": "Inkarniert in dieser Welt möchten wir für alles, was wir erhalten haben, danken. Wir möchten die Gewinne dieses “Unternehmens” mit Bedürftigen teilen, insbesondere mit denen, die Schwierigkeiten haben und einen Platz zum Leben benötigen. Wir möchten eine helfende Hand reichen, indem wir einen Raum in der Pfarrgemeinde von Palmanova anpassen, um ihn als Familienunterkunft zu nutzen.",
@@ -73,6 +75,11 @@
       "titulo": "Motivationsphrasen für das Gemeinwohl",
       "descripcion": "Wir laden Sie ein, einen Satz von Ihnen selbst oder von einem Autor, mit dem Sie sich identifizieren oder mit dem Sie Sie denken, dass er erhellend sein kann und/oder Hinweise geben kann, um uns als Gesellschaft zum Gemeinwohl zu führen",
       "url": "/de/noticias/frases-motivadoras"
+    },
+    "muralista": {
+      "titulo": "Wir möchten Ihnen die Künstlerin des Wandgemäldes, Carolina, vorstellen",
+      "descripcion": "Carolina hat uns ein Video von ihrem Workshop geschickt, in dem sie ausführlich über ihre Erfahrungen bei der Zusammenarbeit mit unserem Projekt und die Entstehung dieses großartigen Wandgemäldes berichtet.",
+      "url": "/de/noticias/artista-mural-carolina"
     }
   },
   "cookies": {
