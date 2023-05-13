@@ -1,7 +1,4 @@
 ---
-import "@fontsource/montserrat";
-import "@fontsource/manrope";
-
 import i18next, { t } from "i18next";
 import { HeadHrefLangs } from "astro-i18next/components";
 import Metatags from "../components/Metatags.astro";
@@ -26,12 +23,26 @@ const { title } = Astro.props
   </body>
 </html>
 
-<style is:inline>
+<style is:global>
+  @font-face {
+    font-family: Montserrat;
+    src:url("../fonts/Montserrat-Regular.ttf");
+  }
+
+  @font-face {
+    font-family: Manrope;
+    src:url("../fonts/Manrope.ttf");
+  }
+
 	html {
-		font-family: "Montserrat", system-ui, sans-serif;
+		font-family: "Manrope", system-ui, sans-serif;
 		background-color: #f7f6ef;
 		scroll-behavior: smooth;
 	}
+
+  .font-tg-title {
+    font-family: "Montserrat", system-ui, sans-serif;
+  }
 
 	.shadow-tb {
 		text-shadow: black 0.1em 0.1em 0.2em;
@@ -45,5 +56,18 @@ const { title } = Astro.props
   ::selection {
     color: #e6be8f;
     background: #254B5E;
+  }
+
+  .skeleton {
+    animation: skeleton-loading 1s linear infinite alternate;
+  }
+
+  @keyframes skeleton-loading {
+    0% {
+      background-color: hsl(200, 20%, 80%);
+    }
+    100% {
+      background-color: hsl(200, 20%, 95%);
+    }
   }
 </style>

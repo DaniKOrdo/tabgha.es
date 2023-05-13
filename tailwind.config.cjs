@@ -16,9 +16,9 @@ module.exports = {
 				'tg-navbar': '#fdf7e1',
 				'tb-postHeader': '#1e2b61'
 			},
-			fontFamily: {
-				'tg-title': ['Manrope']
-			}
+			// fontFamily: {
+			// 	'tg-title': ['Manrope', 'system-ui']
+			// }
 		},
 	},
 	plugins: [],
