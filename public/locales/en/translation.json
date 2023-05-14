@@ -36,6 +36,7 @@
     "cookies": "Cookie policy"
   },
   "titulos": {
+    "galeria": "GALLERY",
     "sentido": "SENSE",
     "carta": "OUR MENU",
     "bebidas": "DRINKS",
@@ -63,7 +64,7 @@
   "textos": {
     "sentido": "Incarnated in this world, we want to express our gratitude for everything we have received. We want to share the profits of this “venture” with those in need, especially with those who are facing difficulties and require a place to live. We want to lend a helping hand by adapting a space in the Parish of Palmanova to be used as a family shelter.",
     "carta": "Our menu features a wide variety of delicious dishes and drinks at our beach bar. From snacks to seafood and ice-cold cocktails, come and enjoy the sun and the sea breeze.",
-    "colabora": "You can collaborate with our project with a donation via Bizum. You can donate a solidarity menu or any amount you wish.",
+    "colabora": "You can support our projects with a donation. For the family shelter; the Inca soup kitchen or for basic needs. Watch the videos.",
     "noticias": "This is the latest news about our project.",
     "ubicacion": "We are located on the beautiful beach of Portals Nous, where you can enjoy our delicious food and drinks while you relax with breathtaking views of the Mediterranean."
   },

@@ -36,6 +36,7 @@
     "cookies": "Cookie-Politik"
   },
   "titulos": {
+    "galeria": "GALERIE",
     "sentido": "SINN",
     "carta": "UNSERS MENÜ",
     "bebidas": "GETRÄNKE",
@@ -63,7 +64,7 @@
   "textos": {
     "sentido": "Inkarniert in dieser Welt möchten wir für alles, was wir erhalten haben, danken. Wir möchten die Gewinne dieses “Unternehmens” mit Bedürftigen teilen, insbesondere mit denen, die Schwierigkeiten haben und einen Platz zum Leben benötigen. Wir möchten eine helfende Hand reichen, indem wir einen Raum in der Pfarrgemeinde von Palmanova anpassen, um ihn als Familienunterkunft zu nutzen.",
     "carta": "Unsere Speisekarte bietet eine große Auswahl an köstlichen Gerichten und Getränken in unserer Strandbar. Von Snacks über Meeresfrüchte bis hin zu eisgekühlten Cocktails, kommen Sie und genießen Sie die Sonne und die Meeresbrise.",
-    "colabora": "Sie können unser Projekt mit einer Spende über Bizum unterstützen. Sie können ein Solidaritätsmenü oder einen beliebigen Betrag spenden.",
+    "colabora": "Sie können sich mit einer Spende an unseren Projekten beteiligen. Für das Familienheim, die Inka-Suppenküche oder für den Grundbedarf. Sehen Sie sich die Videos an.",
     "noticias": "Hier finden Sie die neuesten Informationen über unser Projekt.",
     "ubicacion": "Wir befinden uns am wunderschönen Strand von Portals Nous, wo Sie unsere köstlichen Speisen und Getränke genießen können, während Sie sich bei einem atemberaubenden Blick auf das Mittelmeer entspannen."
   },

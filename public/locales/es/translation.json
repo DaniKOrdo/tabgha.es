@@ -36,6 +36,7 @@
     "cookies": "Política de cookies"
   },
   "titulos": {
+    "galeria": "GALERIA",
     "sentido": "SENTIDO",
     "carta": "NUESTRA CARTA",
     "bebidas": "BEBIDAS",
@@ -63,7 +64,7 @@
   "textos": {
     "sentido": "Encarnados en el mundo, queremos agradecer todo lo recibido; queremos partir y compartir las ganancias de este “chiringuito” con los más necesitados, en especial con aquellos que están pasando dificultad y necesitan un lugar donde vivir, les queremos dar una mano: vamos a adecuar un espacio en la Parroquia de Palmanova para ser destinado a albergue familiar.",
     "carta": "Nuestro menú cuenta con una amplia variedad de deliciosos platos y bebidas en nuestro chiringuito de playa. Desde aperitivos hasta mariscos y cócteles helados, ven y disfruta del sol y la brisa marina.",
-    "colabora": "Puedes colaborar con nuestro proyecto con una donación mediante Bizum. Se puede donar un menú solidario o la cantidad que desee.",
+    "colabora": "Puedes colaborar con nuestros proyectos con una donación. Para el albergue familiar; el comedor social de Inca o para necesidades básicas. Mira los vídeos.",
     "noticias": "Estas son las últimas noticias sobre nuestro proyecto.",
     "ubicacion": "Estamos ubicados en la hermosa playa de Portals Nous, donde podrás disfrutar de nuestra deliciosa comida y bebidas mientras te relajas con vistas impresionantes al Mediterráneo."
   },
