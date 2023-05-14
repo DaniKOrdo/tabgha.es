@@ -51,7 +51,7 @@ const posts = entries.items.map((item) => {
 
 <section id={t("navbar.noticias")} class="flex justify-center">
   <div
-    class="flex flex-col sm:flex-row gap-4 items-center text-black max-w-screen-xl p-8 max-m-32 md:m-12 rounded-xl"
+    class="flex flex-col sm:flex-row gap-4 items-center text-black max-w-screen-xl max-m-32 md:m-12 rounded-xl"
   >
     <div class="container mx-auto p-8">
       <div class="-mx-4 flex flex-wrap justify-center">
@@ -67,9 +67,9 @@ const posts = entries.items.map((item) => {
           </div>
         </div>
       </div>
-      <div class="-mx-4 flex flex-wrap md:gap-0 gap-20">
+      <div class="-mx-4 flex flex-wrap md:flex-nowrap md:gap-4 gap-10">
         <NoticiasGrupo
-          imagen="/img/mural-tabgha.jpg"
+          imagen="/img/muralista-tabgha.jpg"
           alt="Mural Tabgha"
           fecha="11/5/2023"
           titulo={t("noticias.muralista.titulo")}
