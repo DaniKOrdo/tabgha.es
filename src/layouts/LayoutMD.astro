@@ -1,7 +1,4 @@
 ---
-import "@fontsource/montserrat";
-import "@fontsource/manrope";
-
 import i18next, { t } from "i18next";
 import { HeadHrefLangs } from "astro-i18next/components";
 import Metatags from "../components/Metatags.astro";
@@ -22,6 +19,9 @@ const { frontmatter } = Astro.props
     <meta name="generator" content={Astro.generator} />
     <HeadHrefLangs />
     <title>{ frontmatter.title }</title>
+     <!-- Primary Meta Tags -->
+     <meta name="title" content={t(frontmatter.title || "site.inicio")} />
+     <meta name="description" content={t(frontmatter.titleSection || "site.descripcion")}/>
     <Metatags />
     <GoogleAnalytics />
     <link rel="sitemap" href="/sitemap-index.xml">
