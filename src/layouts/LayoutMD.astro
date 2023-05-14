@@ -8,6 +8,7 @@ import Metatags from "../components/Metatags.astro";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 import TitleSection from "../components/widgets/TitleSection.astro";
+import GoogleAnalytics from "../components/GoogleAnalytics.astro";
 
 const { frontmatter } = Astro.props
 ---
@@ -22,6 +23,7 @@ const { frontmatter } = Astro.props
     <HeadHrefLangs />
     <title>{ frontmatter.title }</title>
     <Metatags />
+    <GoogleAnalytics />
     <link rel="sitemap" href="/sitemap-index.xml">
   </head>
   <body>
