@@ -1,19 +1,12 @@
 ---
-import i18next, { t } from "i18next";
+import { t } from "i18next";
 import AngleLeft from "./icons/AngleLeft.astro";
 import AngleRight from "./icons/AngleRight.astro";
 import TitleSection from "./widgets/TitleSection.astro";
-import fs from "fs";
-import path from "path";
 
-function getGalleryImages() {
-  const directory = path.join(process.cwd(), "/public/img/galeria");
-  const files = fs.readdirSync(directory);
-  const images = files
-    .filter((file) => path.extname(file).toLowerCase() === ".jpg")
-    .map((file) => path.join("/img/galeria", file));
-  return images;
-}
+const images = await Astro.glob("/public/img/galeria/*").then(files => {
+  return files.map(file => file.default);
+});
 ---
 
 <section class="flex flex-col justify-center items-center pt-16 md:pt-8 ">
@@ -22,7 +15,7 @@ function getGalleryImages() {
     <div>
       <div>
         <div class="carousel-container">
-          {getGalleryImages().map((image, index) => (
+          {images.map(image => (
             <div class="item fade">
               <div class="image">
                 <img src={image} alt="Galeria Tabgha" loading="lazy" class="skeleton" />
