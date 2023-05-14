@@ -2,6 +2,7 @@
 import i18next, { t } from "i18next";
 import Section from "./widgets/Section.astro";
 import ArrowRightSM from "./icons/ArrowRightSM.astro";
+import { localizePath } from "astro-i18next";
 
 const lang = i18next.language;
 
@@ -26,7 +27,8 @@ const fontSize = () => {
   alt="Tabgha solidario colabora"
   imgWidth="512px"
   imgHeight="320px"
-  fontText={fontSize()}
+  fontText={fontSize()},
+  url={localizePath(t("navegacion.colabora"))}
 >
   <div class="mt-8 justify-center flex gap-4 text-center">
     <a

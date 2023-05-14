@@ -12,12 +12,13 @@ const {
   imgWidth,
   imgHeight,
   fontText = "text-3xl",
+  url
 } = Astro.props;
 ---
 
 <section id={id} class="flex justify-center my-8">
   <div
-    class={`flex ${flex} lg:justify-center items-center w-screen max-w-screen-xl lg:gap-4 text-black max-m-32 lg:p-6 lg:m-6 rounded-xl`}
+    class={`flex ${flex} lg:justify-center items-center max-w-screen-xl lg:gap-4 text-black max-m-32 lg:p-6 lg:m-6 rounded-xl`}
   >
     <div
       class="flex flex-col items-center sm:text-left p-6 lg:w-1/2 h-full"
@@ -39,9 +40,9 @@ const {
           />
         </div>
       ) : (
-        <div class="p-6 flex justify-center lg:w-1/2">
-          <img loading="lazy" class="max-h-80 rounded-md" src={img} alt={alt} width={imgWidth} height={imgHeight} />
-        </div>
+        <a class="p-6 flex justify-center lg:w-1/2" href={url}>
+          <img loading="lazy" class="max-h-80 rounded-md object-contain" src={img} alt={alt} width={imgWidth} height={imgHeight} />
+        </a>
       )
     }
   </div>
