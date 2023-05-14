@@ -1,6 +1,5 @@
 ---
 import i18next, { t, changeLanguage } from "i18next";
-import { Trans, HeadHrefLangs } from "astro-i18next/components";
 import Layout from "../../layouts/Layout.astro";
 import Navbar from "../../components/Navbar.astro";
 import Hero from "../../components/Hero.astro";
@@ -23,7 +22,7 @@ changeLanguage("ca");
 	<main class="mb-36">
 		<Hero />
 		<CookiesBanner />
-		<!-- <Carousel /> -->
+		<Carousel />
 		<Sentido />
 		<NuestraCarta />
 		<Colabora />
