@@ -88,5 +88,11 @@
     "info": "Més informació",
     "aceptar": "Acceptar",
     "url": "/ca/legal/politica-de-cookies/"
+  },
+  "contacto": {
+    "id": "contacte",
+    "titulo": "CONTACTE",
+    "movilTexto": "Reserva la teva taula:",
+    "mailTexto": "Correu de contacte:"
   }
 }

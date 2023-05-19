@@ -88,5 +88,11 @@
     "info": "Mehr darüber erfahren",
     "aceptar": "Akzeptieren Sie",
     "url": "/de/legal/politica-de-cookies/"
+  },
+  "contacto": {
+    "id": "kontakt",
+    "titulo": "KONTAKT",
+    "movilTexto": "Buchen Sie Ihren Tisch:",
+    "mailTexto": "E-Mail-Kontakt:"
   }
 }

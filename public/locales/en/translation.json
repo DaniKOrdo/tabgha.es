@@ -88,5 +88,11 @@
     "info": "More information",
     "aceptar": "Accept",
     "url": "/en/legal/politica-de-cookies/"
+  },
+  "contacto": {
+    "id": "contact",
+    "titulo": "CONTACT",
+    "movilTexto": "Book your table:",
+    "mailTexto": "Contact email:"
   }
 }
