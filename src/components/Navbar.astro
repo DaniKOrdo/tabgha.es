@@ -26,7 +26,7 @@ const navigationItems = {
     "/colabora/": t("navbar.colabora"),
     "/noticias/": t("navbar.noticias"),
     "/ubicacion/": t("navbar.ubicacion"),
-    // "/contacto/": t("navbar.contacto"),
+    "/contacto/": t("navbar.contacto"),
 };
 
 const validPathnames = ["/", "/ca", "/en", "/de"];
@@ -84,7 +84,7 @@ if (validPathnames.includes(pathname)) {
     </div>
 </nav>
 
-<style>
+<style is:inline>
     @media (max-width: 367px) {
         .logoName {
             display: none;
