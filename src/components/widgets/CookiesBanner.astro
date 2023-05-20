@@ -1,16 +1,14 @@
 ---
 import { t } from "i18next";
-
 ---
+
 <div
   id="cookie-banner"
   class="hidden fixed bottom-0 left-0 w-full bg-gray-200 px-4 py-2 text-center text-sm"
 >
   <span class="inline-block align-middle mr-2"
-    >{t("cookies.texto")}<a
-      href={t("cookies.url")}
-      class="underline">{t("cookies.info")}</a
-    ></span
+    >{t("cookies.texto")}
+    <a href={t("cookies.url")} class="underline"> {t("cookies.info")}</a></span
   >
   <button
     id="cookie-accept"
@@ -20,18 +18,18 @@ import { t } from "i18next";
 </div>
 
 <script is:inline>
-document.addEventListener("DOMContentLoaded", function() {
-  let banner = document.getElementById("cookie-banner");
-  let acceptButton = document.getElementById("cookie-accept");
+  document.addEventListener("DOMContentLoaded", function () {
+    let banner = document.getElementById("cookie-banner");
+    let acceptButton = document.getElementById("cookie-accept");
 
-  let isBannerAccepted = localStorage.getItem("cookieBannerAccepted");
-  if (!isBannerAccepted) {
-    banner.style.display = "block";
-  }
+    let isBannerAccepted = localStorage.getItem("cookieBannerAccepted");
+    if (!isBannerAccepted) {
+      banner.style.display = "block";
+    }
 
-  acceptButton.addEventListener("click", function() {
-    banner.style.display = "none";
-    localStorage.setItem("cookieBannerAccepted", true);
+    acceptButton.addEventListener("click", function () {
+      banner.style.display = "none";
+      localStorage.setItem("cookieBannerAccepted", true);
+    });
   });
-});
 </script>
