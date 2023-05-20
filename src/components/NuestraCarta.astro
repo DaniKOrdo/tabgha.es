@@ -4,6 +4,7 @@ import i18next, { t } from "i18next";
 import Section from "./widgets/Section.astro";
 import RestaurantSVG from "./icons/Restaurant.astro";
 import DrinkSVG from "./icons/Drink.astro";
+import ArrowRightSM from "./icons/ArrowRightSM.astro";
 
 const lang = i18next.language;
 
@@ -21,9 +22,8 @@ const imgMenu =
   img={imgMenu}
   alt="Menu Carta Tabgha"
   imgWidth="512px"
-  imgHeight="320px",
+  imgHeight="320px"
   url={localizePath(t("navegacion.carta"))}
-
 >
   <div
     class="justify-center flex flex-col items-center text-center mt-8 gap-4 w-full"
@@ -34,9 +34,16 @@ const imgMenu =
       ><RestaurantSVG />{t("botones.comida")}</a
     >
     <a
-      href={localizePath(t("navegacion.bebidas"))} 
+      href={localizePath(t("navegacion.bebidas"))}
       class="flex items-center justify-center gap-2 w-3/4 rounded px-12 py-3 text-sm font-medium text-white shadow bg-tg-two"
       ><DrinkSVG />{t("botones.bebidas")}</a
     >
+    <a
+      href={`#${t("contacto.id")}`}
+      class="flex items-center justify-center gap-2 w-3/4 rounded px-12 py-3 text-sm font-medium text-black shadow bg-white"
+    >
+      {t("contacto.movilTexto").slice(0, -1)}
+      <ArrowRightSM />
+    </a>
   </div>
 </Section>
