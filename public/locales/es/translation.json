@@ -36,7 +36,7 @@
     "cookies": "Política de cookies"
   },
   "titulos": {
-    "galeria": "GALERIA",
+    "galeria": "GALERÍA",
     "sentido": "SENTIDO",
     "carta": "NUESTRA CARTA",
     "bebidas": "BEBIDAS",
@@ -85,7 +85,7 @@
   },
   "cookies": {
     "texto": "Utilizamos cookies para mejorar tu experiencia en nuestro sitio web. Al continuar navegando, aceptas el uso de cookies no esenciales.",
-    "info": "Más información",
+    "info": "Saber más",
     "aceptar": "Aceptar",
     "url": "/legal/politica-de-cookies/"
   },
