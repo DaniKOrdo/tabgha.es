@@ -87,7 +87,6 @@ const posts = entries.items.map((item) => {
         {
           posts.map((post) => (
             <NoticiasGrupo
-              // imagen={post.imagenPortada.fields.file.url}
               imagen="/img/papa-francisco.webp"
               alt="Papa Francisco"
               fecha={post.fecha}
@@ -99,6 +98,7 @@ const posts = entries.items.map((item) => {
         }
         <!-- {
           <NoticiasGrupo
+            // imagen={post.imagenPortada.fields.file.url}
             imagen={entries.items[0].fields.imagen.fields.file.url}
             fecha={entries.items[0].fields.fecha}
             titulo={entries.items[0].fields.titulo}
