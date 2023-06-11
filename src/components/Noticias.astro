@@ -47,6 +47,8 @@ const posts = entries.items.map((item) => {
     url
   };
 });
+
+const lastItem = entries.items[entries.items.length - 1];
 ---
 
 <section id={t("navbar.noticias")} class="flex justify-center">
@@ -67,7 +69,19 @@ const posts = entries.items.map((item) => {
           </div>
         </div>
       </div>
-      <div class="-mx-4 flex flex-wrap md:flex-nowrap md:gap-4 gap-10">
+      <div class="-mx-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-4 gap-10">
+        {
+          posts.slice(0, -1).map((post) => (
+            <NoticiasGrupo
+              imagen={post.imagenPortada.fields.file.url}
+              alt={post.titulo}
+              fecha={post.fecha}
+              titulo={post.titulo}
+              descripcion={post.descripcion}
+              url={post.url}
+            />
+          ))
+        }
         <NoticiasGrupo
           imagen="/img/muralista-tabgha.webp"
           alt="Mural Tabgha"
@@ -85,26 +99,13 @@ const posts = entries.items.map((item) => {
           url={t("noticias.frases.url")}
         />
         {
-          posts.map((post) => (
-            <NoticiasGrupo
-              imagen="/img/papa-francisco.webp"
-              alt="Papa Francisco"
-              fecha={post.fecha}
-              titulo={post.titulo}
-              descripcion={post.descripcion}
-              url={post.url}
-            />
-          ))
-        }
-        <!-- {
           <NoticiasGrupo
-            // imagen={post.imagenPortada.fields.file.url}
-            imagen={entries.items[0].fields.imagen.fields.file.url}
-            fecha={entries.items[0].fields.fecha}
-            titulo={entries.items[0].fields.titulo}
-            descripcion={entries.items[0].fields.descripcion}
+            imagen={lastItem.fields.imagenPortada.fields.file.url}
+            fecha={lastItem.fields.fecha}
+            titulo={lastItem.fields.titulo}
+            descripcion={lastItem.fields.descripcion}
           />
-        } -->
+        }
       </div>
     </div>
   </div>
