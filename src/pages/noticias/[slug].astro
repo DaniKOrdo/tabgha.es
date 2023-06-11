@@ -11,26 +11,44 @@ import type { Noticia } from "../../lib/contentful";
 changeLanguage("es");
 
 export async function getStaticPaths() {
-    const { items } = await contentfulClient.getEntries<Noticia>({
+    const { items } = await contentfulClient.getEntries<any>({
         content_type: "noticias",
     });
     const options = {
         renderNode: {
-            [BLOCKS.EMBEDDED_ASSET]: (node) => {
+            [BLOCKS.EMBEDDED_ASSET]: (node: any) => {
                 const { url, description } = node.data.target.fields.file;
                 return `<img src="${url}" alt="${description}" />`;
             },
-            [INLINES.HYPERLINK]: (node, next) => {
-                return `<a href="${node.data.uri}"${node.data.uri.startsWith("https://www.tabgha.es/")
-                    ? ""
-                    : " target=\"_blank\" rel=\"noopener noreferrer\""}>${next(node.content)}</a>`;
+            [INLINES.HYPERLINK]: (node: any, next: any) => {
+                return `<a href="${node.data.uri}"${
+                    node.data.uri.startsWith("https://www.tabgha.es/")
+                        ? ""
+                        : ' target="_blank" rel="noopener noreferrer"'
+                }>${next(node.content)}</a>`;
+            },
+            [INLINES.HYPERLINK]: (node: any) => {
+                return (
+                    `<div class="flex aspect-video skeleton">
+                        <iframe
+                            width="100%"
+                            title="Video Youtube"
+                            src=${node.data.uri}
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen
+                        ></iframe>
+                    </div>`
+                );
             },
         },
     };
-    const pages = items.map((item) => {
+    const pages = items.map((item: any) => {
         let tituloField = "titulo";
         let contenidoField = "contenido";
-        const contenido = documentToHtmlString(item.fields[contenidoField], options);
+        const contenido = documentToHtmlString(
+            item.fields[contenidoField],
+            options
+        );
         const titulo = item.fields[tituloField];
         const fecha = new Date(item.fields.fecha).toLocaleDateString();
         return {
@@ -49,18 +67,15 @@ const pageTitle = `Tabgha | ${titulo}/`;
 ---
 
 <Layout title={pageTitle}>
-  <header>
-    <Navbar />
-  </header>
-  <main class="flex justify-center sm:py-40 py-24 px-5 min-h-[95vh]">
-    <!-- <h1>{titulo}</h1>
-        <time>{fecha}</time> -->
-    <article
-      class="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue"
-      set:html={contenido}
-    />
-    <!-- <TitleSection title={titulo} customClass="p-6" /> -->
-  </main>
+    <header>
+        <Navbar />
+    </header>
+    <main class="flex justify-center sm:py-40 py-24 px-5 min-h-[95vh]">
+        <article
+            class="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue"
+            set:html={contenido}
+        />
+    </main>
 
-  <Footer />
+    <Footer />
 </Layout>
