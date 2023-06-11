@@ -11,23 +11,36 @@ import type { Noticia } from "../../../lib/contentful";
 changeLanguage("en");
 
 export async function getStaticPaths() {
-    const { items } = await contentfulClient.getEntries<Noticia>({
+    const { items } = await contentfulClient.getEntries<any>({
         content_type: "noticias",
     });
     const options = {
         renderNode: {
-            [BLOCKS.EMBEDDED_ASSET]: (node) => {
+            [BLOCKS.EMBEDDED_ASSET]: (node: any) => {
                 const { url, description } = node.data.target.fields.file;
                 return `<img src="${url}" alt="${description}" />`;
             },
-            [INLINES.HYPERLINK]: (node, next) => {
+            [INLINES.HYPERLINK]: (node: any, next: any) => {
                 return `<a href="${node.data.uri}"${node.data.uri.startsWith("https://www.tabgha.es/")
                     ? ""
                     : " target=\"_blank\" rel=\"noopener noreferrer\""}>${next(node.content)}</a>`;
             },
+            [INLINES.HYPERLINK]: (node: any) => {
+                return (
+                    `<div class="flex aspect-video skeleton">
+                        <iframe
+                            width="100%"
+                            title="Video Youtube"
+                            src=${node.data.uri}
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen
+                        ></iframe>
+                    </div>`
+                );
+            },
         },
     };
-    const pages = items.map((item) => {
+    const pages = items.map((item: any) => {
         let tituloField = "titulo_en";
         let contenidoField = "contenido_en";
         const contenido = documentToHtmlString(item.fields[contenidoField], options);
