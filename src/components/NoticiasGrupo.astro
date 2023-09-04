@@ -11,9 +11,9 @@ const { imagen, alt, fecha, titulo, descripcion, url, optimize = false } = Astro
         <div class="mb-5 rounded aspect-video">
             {
                 optimize === true ? (
-                    <Image src={imagen} alt={alt} width={800} height={435} loading="lazy" class="object-cover skeleton"/>
+                    <Image src={imagen} alt={alt} width={800} height={435} loading="lazy" class="w-full h-full object-cover skeleton"/>
                 ) : (
-                    <img src={imagen} alt={alt} width="800" height="435" loading="lazy" class="object-cover skeleton"/>
+                    <img src={imagen} alt={alt} width="800" height="435" loading="lazy" class="w-full h-full object-cover skeleton"/>
                 )
             }
         </div>
