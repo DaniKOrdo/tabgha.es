@@ -20,11 +20,6 @@ export async function getStaticPaths() {
                 const { url, description } = node.data.target.fields.file;
                 return `<img src="${url}" alt="${description}" />`;
             },
-            [INLINES.HYPERLINK]: (node: any, next: any) => {
-                return `<a href="${node.data.uri}"${node.data.uri.startsWith("https://www.tabgha.es/")
-                    ? ""
-                    : " target=\"_blank\" rel=\"noopener noreferrer\""}>${next(node.content)}</a>`;
-            },
             [INLINES.HYPERLINK]: (node: any) => {
                 return (
                     `<div class="flex aspect-video skeleton">
