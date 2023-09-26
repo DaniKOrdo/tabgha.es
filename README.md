@@ -7,4 +7,4 @@
 ### Recursos utilizados:
 - Framework: [Astro](https://astro.build/)
 - Multiidioma: [astro-i18next](https://github.com/yassinedoghri/astro-i18next)
-- CMS Headless: [Contentful] (https://www.contentful.com/)
+- CMS Headless: [Contentful](https://contentful.com)
