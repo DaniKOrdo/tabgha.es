@@ -2,10 +2,8 @@
 import i18next, { t } from "i18next";
 import { localizePath } from "astro-i18next";
 import  LanguageSelectorLOCAL  from "./LanguageSelector.astro";
-import  {LanguageSelector}  from "astro-i18next/components";
 import Flags from "./widgets/Flags.astro";
 import TabghaLogo from "./widgets/TabghaLogo.astro";
-
 
 const { pathname } = Astro.url;
 
@@ -36,6 +34,9 @@ if (validPathnames.includes(pathname)) {
 }
 ---
 
+<div class="flex items-center justify-center w-full z-10 bg-tg-two text-white bg-opacity-100 border-gray-200 px-2 sm:px-4 py-2.5">
+    <marquee class="3xl:w-7/12 2xl:w-9/12">📣 {t("navbar.banner")} 📣</marquee>
+</div>
 <nav class="absolute w-full z-10 bg-[#f7f6ef] bg-opacity-100 border-gray-200 px-2 sm:px-4 py-2.5">
     <div class="container flex flex-wrap items-center justify-between mx-auto">
         <a href={homePath} class="flex items-center">
