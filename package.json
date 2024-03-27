@@ -11,6 +11,7 @@
     "translate": "npx astro-i18next generate",
     "deploy:simple": "node deploy",
     "deploy": "astro build && node deploy",
+    "xdeploy": "astro build && node deploy",
     "deploy:translate": "astro build && astro-i18next generate && node deploy"
   },
   "dependencies": {
