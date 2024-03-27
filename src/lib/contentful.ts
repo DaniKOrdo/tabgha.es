@@ -1,7 +1,7 @@
 import contentful from "contentful";
 import type { Document } from "@contentful/rich-text-types";
 
-export interface Noticia {
+export type Noticia = {
   imagenPortada: any;
   fecha: any;
   titulo: string;
@@ -17,6 +17,7 @@ export interface Noticia {
   contenido_ca: Document;
   contenido_en: Document;
   contenido_de: Document;
+  content_type: string;
 }
 
 export const contentfulClient = contentful.createClient({
